@@ -87,15 +87,62 @@ packages:
     module: radiospectra
     repo_url: https://github.com/sunpy/radiospectra.git
     install_extras: [tests]
+    
+  - pypi_name: aiapy
+    tier: affiliated
+    module: aiapy
+    repo_url: https://github.com/LM-SAL/aiapy.git
+    install_extras: [tests]
+    
+  - pypi_name: roentgen
+    tier: affiliated
+    module: roentgen
+    repo_url: https://github.com/ehsteve/roentgen
+    install_extras: [tests]
+    
+  - pypi_name: solarmach
+    tier: affiliated
+    module: solarmach
+    repo_url: https://github.com/jgieseler/solarmach
+    install_extras: [tests]
+    
+  - pypi_name: dkist
+    tier: affiliated
+    module: dkist
+    repo_url: https://github.com/dkistdc/dkist.git
+    install_extras: [tests]
 
+  - pypi_name: xrtpy
+    tier: affiliated
+    module: xrtpy
+    repo_url: https://github.com/HinodeXRT/xrtpy
+    install_extras: [tests]
+    
+  - pypi_name: irispy
+    tier: affiliated
+    module: irispy
+    repo_url: https://github.com/LM-SAL/irispy-lmsal
+    install_extras: [tests]
+    
+  - pypi_name: scope
+    tier: affiliated
+    module: scope
+    repo_url: https://github.com/Warwick-Solar/scope
+    install_extras: [tests]
+    
+  - pypi_name: spectroflat
+    tier: affiliated
+    module: spectroflat
+    repo_url: https://gitlab.gwdg.de/hoelken/spectroflat
+    
   - pypi_name: sunkit-spex
-    tier: coordinated
+    tier: provisional
     module: sunkit_spex
     repo_url: https://github.com/sunpy/sunkit-spex.git
     install_extras: [tests]
 
   - pypi_name: pyflct
-    tier: coordinated
+    tier: provisional
     module: pyflct
     repo_url: https://github.com/sunpy/pyflct.git
     install_extras: [tests]
