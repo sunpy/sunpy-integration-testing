@@ -118,10 +118,10 @@ packages:
     repo_url: https://github.com/HinodeXRT/xrtpy
     install_extras: [tests]
     
-  - pypi_name: irispy
+  - pypi_name: irispy-lmsal
     tier: affiliated
     module: irispy
-    repo_url: https://github.com/LM-SAL/irispy-lmsal
+    repo_url: https://github.com/LM-SAL/irispy
     install_extras: [tests]
     
   - pypi_name: scope
