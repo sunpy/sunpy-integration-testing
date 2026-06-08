@@ -121,7 +121,7 @@ packages:
   - pypi_name: irispy
     tier: affiliated
     module: irispy
-    repo_url: https://github.com/LM-SAL/irispy-lmsal
+    repo_url: https://github.com/LM-SAL/irispy
     install_extras: [tests]
     
   - pypi_name: scope
