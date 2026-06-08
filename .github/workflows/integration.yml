@@ -56,7 +56,7 @@ jobs:
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
 
-      # This Python only runs the `astropy-integration` orchestrator CLI;
+      # This Python only runs the `sunpy-integration` orchestrator CLI;
       # the test venv for `matrix.python` is built separately by uv (see
       # the `run` step below), so a fixed version is fine here.
       - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
@@ -87,7 +87,7 @@ jobs:
             uv-${{ runner.os }}-${{ matrix.variant }}-
             uv-${{ runner.os }}-
 
-      - name: Install astropy-integration
+      - name: Install sunpy-integration
         run: pip install .
 
       - name: Run ${{ matrix.variant }} variant on Python ${{ matrix.python }}
@@ -96,7 +96,7 @@ jobs:
           # matrix finishes in minutes; conftest.py at the repo root reads
           # this env var and truncates the collected items.
           PYTEST_LIMIT_N: ${{ github.event_name == 'pull_request' && '10' || '' }}
-        run: astropy-integration run --variant ${{ matrix.variant }} --python ${{ matrix.python }}
+        run: sunpy-integration run --variant ${{ matrix.variant }} --python ${{ matrix.python }}
 
       - name: Prune uv cache before save
         if: always()
@@ -123,7 +123,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install astropy-integration
+      - name: Install sunpy-integration
         run: pip install .
 
       - name: Download all variant results
@@ -134,7 +134,7 @@ jobs:
           path: results/
 
       - name: Build dashboard
-        run: astropy-integration dashboard
+        run: sunpy-integration dashboard
 
       # PR path: upload index.html as a non-zipped artifact for the
       # in-browser preview (linked from a PR check by preview-link.yml).

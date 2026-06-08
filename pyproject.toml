@@ -3,7 +3,7 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "astropy-integration"
+name = "sunpy-integration"
 version = "0.1.0"
 description = "Run and dashboard the astropy ecosystem integration matrix."
 requires-python = ">=3.11"
@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [project.scripts]
-astropy-integration = "astropy_integration.cli:main"
+sunpy-integration = "astropy_integration.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["astropy_integration*"]
