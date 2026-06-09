@@ -124,7 +124,7 @@ packages:
     repo_url: https://github.com/LM-SAL/irispy
     install_extras: [tests]
     
-  - pypi_name: scope
+  - pypi_name: scope-emd
     tier: affiliated
     module: scope
     repo_url: https://github.com/Warwick-Solar/scope
