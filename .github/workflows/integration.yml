@@ -87,6 +87,8 @@ jobs:
             uv-${{ runner.os }}-${{ matrix.variant }}-
             uv-${{ runner.os }}-
 
+      - run: sudo apt install libfftw3-dev ffmpeg
+      
       - name: Install sunpy-integration
         run: pip install .
 
