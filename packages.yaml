@@ -81,12 +81,6 @@ packages:
     module: sunkit_magex
     repo_url: https://github.com/sunpy/sunkit-magex.git
     install_extras: [tests]
-
-  - pypi_name: radiospectra
-    tier: coordinated
-    module: radiospectra
-    repo_url: https://github.com/sunpy/radiospectra.git
-    install_extras: [tests]
     
   - pypi_name: aiapy
     tier: affiliated
@@ -145,4 +139,10 @@ packages:
     tier: provisional
     module: pyflct
     repo_url: https://github.com/sunpy/pyflct.git
+    install_extras: [tests]
+
+  - pypi_name: radiospectra
+    tier: provisional
+    module: radiospectra
+    repo_url: https://github.com/sunpy/radiospectra.git
     install_extras: [tests]
