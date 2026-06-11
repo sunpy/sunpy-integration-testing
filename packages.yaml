@@ -133,7 +133,7 @@ packages:
     tier: provisional
     module: sunkit_spex
     repo_url: https://github.com/sunpy/sunkit-spex.git
-    install_extras: [tests]
+    install_extras: [tests,legacy]
 
   - pypi_name: pyflct
     tier: provisional
