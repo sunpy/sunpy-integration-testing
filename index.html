@@ -1,0 +1,3785 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sunpy ecosystem integration matrix</title>
+<style>body { font-family: -apple-system, system-ui, sans-serif; margin: 2em; line-height: 1.5; color: #1a1a1a; max-width: 1200px; }
+h1, h2 { margin-top: 0; }
+a { color: #0366d6; text-decoration: none; }
+a:hover { text-decoration: underline; }
+table { border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: #f6f8fa; }
+th.python-group { text-align: center; border-bottom: 2px solid #ccc; }
+.banner { background: #fff8c5; border: 1px solid #d4a72c; padding: 0.75em 1em;
+          border-radius: 6px; margin: 1em 0; }
+tr.tier-header th { background: #eef2f6; text-align: left; font-weight: 600;
+                    text-transform: lowercase; letter-spacing: 0.5px; color: #444; }
+.meta dl { margin: 0.3em 0; display: grid; grid-template-columns: max-content 1fr; gap: 0.2em 1em; color: #444; }
+.meta dt { font-weight: 600; }
+.pill { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.85em; font-weight: 600; min-width: 4em; text-align: center; }
+.pill.pass { background: #dcffe4; color: #22863a; }
+.pill.fail { background: #ffdce0; color: #cb2431; }
+.pill.no-tests { background: #eef2f6; color: #6a737d; }
+.pill.skipped { background: #e6e9ee; color: #6a737d; font-style: italic; }
+.pill.install-fail { background: #fff1d6; color: #b08000; }
+.pill.timeout { background: #ece2ff; color: #5b3fb8; }
+.pill.missing { background: #f1f1f1; color: #999; }
+a.cell-link { text-decoration: none; }
+a.cell-link:hover .pill { filter: brightness(0.94); }
+.matrix tr:hover td { background: #fafafa; }
+.pkg-name { font-weight: 600; }
+pre { background: #1e1e1e; color: #d4d4d4; padding: 1em; border-radius: 6px;
+      overflow-x: auto; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; max-height: 50em; }
+details summary { cursor: pointer; padding: 4px 0; font-weight: 600; }
+.meta-table td { padding: 4px 10px; }
+.meta-table { width: auto; }
+nav { margin-bottom: 1.5em; font-size: 0.9em; }
+.legend { font-size: 0.85em; color: #6a737d; margin-top: 1em; }
+.legend .pill { margin: 0 0.3em; }
+
+@media (prefers-color-scheme: dark) {
+  body { background: #0d1117; color: #c9d1d9; }
+  a { color: #58a6ff; }
+  th, td { border-color: #30363d; }
+  th { background: #161b22; }
+  th.python-group { border-bottom-color: #484f58; }
+  .banner { background: #2b1d00; border-color: #6e5500; }
+  tr.tier-header th { background: #161b22; color: #8b949e; }
+  .meta dl { color: #8b949e; }
+  .matrix tr:hover td { background: #161b22; }
+  .pill.pass        { background: #0a3a17; color: #3fb950; }
+  .pill.fail        { background: #4a1216; color: #f85149; }
+  .pill.no-tests    { background: #21262d; color: #8b949e; }
+  .pill.skipped     { background: #21262d; color: #8b949e; }
+  .pill.install-fail{ background: #3d2900; color: #e3b341; }
+  .pill.timeout     { background: #261c4a; color: #a371f7; }
+  .pill.missing     { background: #161b22; color: #6e7681; }
+}</style>
+</head>
+<body>
+
+
+<h1>Sunpy ecosystem integration matrix</h1>
+
+
+
+<table class="meta-table">
+<thead><tr><th>Python</th><th>Variant</th><th>sunpy</th><th>Started</th><th>Finished</th></tr></thead>
+<tbody>
+
+<tr>
+  <td><code>3.12</code></td>
+  <td><code>stable</code></td>
+  <td>8.0.0</td>
+  <td>2026-09-27T06:21:26+00:00</td>
+  <td>2026-09-27T06:27:01+00:00</td>
+</tr>
+
+<tr>
+  <td><code>3.12</code></td>
+  <td><code>pre</code></td>
+  <td>8.0.0</td>
+  <td>2026-09-27T06:22:06+00:00</td>
+  <td>2026-09-27T06:31:26+00:00</td>
+</tr>
+
+<tr>
+  <td><code>3.12</code></td>
+  <td><code>dev</code></td>
+  <td>8.0.0 <small style="color:#999">(nightly)</small></td>
+  <td>2026-09-27T06:22:02+00:00</td>
+  <td>2026-09-27T06:29:09+00:00</td>
+</tr>
+
+<tr>
+  <td><code>3.14</code></td>
+  <td><code>stable</code></td>
+  <td>8.0.0</td>
+  <td>2026-09-27T06:21:21+00:00</td>
+  <td>2026-09-27T06:25:23+00:00</td>
+</tr>
+
+<tr>
+  <td><code>3.14</code></td>
+  <td><code>pre</code></td>
+  <td>8.0.0</td>
+  <td>2026-09-27T06:21:56+00:00</td>
+  <td>2026-09-27T06:26:36+00:00</td>
+</tr>
+
+<tr>
+  <td><code>3.14</code></td>
+  <td><code>dev</code></td>
+  <td>8.0.0 <small style="color:#999">(nightly)</small></td>
+  <td>2026-09-27T06:21:50+00:00</td>
+  <td>2026-09-27T06:28:11+00:00</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>Matrix</h2>
+<table class="matrix">
+<thead>
+<tr>
+  <th rowspan="2">Package</th>
+  <th colspan="3" class="python-group">Python 3.12</th><th colspan="3" class="python-group">Python 3.14</th>
+</tr>
+<tr>
+  <th>stable</th><th>pre</th><th>dev</th><th>stable</th><th>pre</th><th>dev</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="tier-header">
+  <th colspan="7">Coordinated</th>
+</tr>
+
+<tr>
+  <td><span class="pkg-name">drms</span></td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.9.1</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.9.1</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.9.2.dev9+g3762a56c5</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.9.1</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.9.1</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.9.2.dev9+g3762a56c5</small>
+  </td>
+  
+</tr>
+
+<tr>
+  <td><span class="pkg-name">ndcube</span></td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">2.4.2</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">2.4.2</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">2.5.dev39+g49b70c196</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">2.4.2</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">2.4.2</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">2.5.dev39+g49b70c196</small>
+  </td>
+  
+</tr>
+
+<tr>
+  <td><span class="pkg-name">sunkit-image</span></td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.1.dev15+g6ff504807</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.1.dev15+g6ff504807</small>
+  </td>
+  
+</tr>
+
+<tr>
+  <td><span class="pkg-name">sunkit-instruments</span></td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.6.2</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.6.2</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.6.3.dev27+g6a55cf499</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.6.2</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.6.2</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.6.3.dev27+g6a55cf499</small>
+  </td>
+  
+</tr>
+
+<tr>
+  <td><span class="pkg-name">sunkit-magex</span></td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">1.2.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">1.2.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">1.2.1.dev1+gf691de95d</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">1.2.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">1.2.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">1.2.1.dev1+gf691de95d</small>
+  </td>
+  
+</tr>
+
+<tr>
+  <td><span class="pkg-name">sunraster</span></td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.1.dev15+gfbec000ea</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.1.dev15+gfbec000ea</small>
+  </td>
+  
+</tr>
+
+
+<tr class="tier-header">
+  <th colspan="7">Affiliated</th>
+</tr>
+
+<tr>
+  <td><span class="pkg-name">aiapy</span></td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.12.1</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.12.1</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.12.2.dev44+g2a7981e9c</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.12.1</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.12.1</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.12.2.dev44+g2a7981e9c</small>
+  </td>
+  
+</tr>
+
+<tr>
+  <td><span class="pkg-name">dkist</span></td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-dkist__stable__3_12"><span class="pill fail">FAIL</span></a>
+    
+    <br><small style="color:#999">1.18.1</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-dkist__pre__3_12"><span class="pill fail">FAIL</span></a>
+    
+    <br><small style="color:#999">1.18.1</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-dkist__dev__3_12"><span class="pill fail">FAIL</span></a>
+    
+    <br><small style="color:#999">1.17.1.dev45+gb645f33ca</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-dkist__stable__3_14"><span class="pill fail">FAIL</span></a>
+    
+    <br><small style="color:#999">1.18.1</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-dkist__pre__3_14"><span class="pill fail">FAIL</span></a>
+    
+    <br><small style="color:#999">1.18.1</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-dkist__dev__3_14"><span class="pill fail">FAIL</span></a>
+    
+    <br><small style="color:#999">1.17.1.dev45+gb645f33ca</small>
+  </td>
+  
+</tr>
+
+<tr>
+  <td><span class="pkg-name">irispy-lmsal</span></td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.9.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.9.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.9.1.dev7+g34b580506</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.9.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.9.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.9.1.dev7+g34b580506</small>
+  </td>
+  
+</tr>
+
+<tr>
+  <td><span class="pkg-name">roentgen</span></td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-roentgen__stable__3_12"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">2.4.0</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-roentgen__pre__3_12"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">2.4.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">2.2.0.post1.dev9+gcb3c8f5df</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-roentgen__stable__3_14"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">2.4.0</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-roentgen__pre__3_14"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">2.4.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">2.2.0.post1.dev9+gcb3c8f5df</small>
+  </td>
+  
+</tr>
+
+<tr>
+  <td><span class="pkg-name">scope-emd</span></td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-scope-emd__stable__3_12"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">1.0.0</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-scope-emd__pre__3_12"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">1.0.0</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-scope-emd__dev__3_12"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">1.0.0</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-scope-emd__stable__3_14"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">1.0.0</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-scope-emd__pre__3_14"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">1.0.0</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-scope-emd__dev__3_14"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">1.0.0</small>
+  </td>
+  
+</tr>
+
+<tr>
+  <td><span class="pkg-name">solarmach</span></td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-solarmach__stable__3_12"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">0.5.4</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-solarmach__pre__3_12"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">0.5.4</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-solarmach__dev__3_12"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">0.5.5.dev7+g562aafb53</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-solarmach__stable__3_14"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">0.5.4</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-solarmach__pre__3_14"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">0.5.4</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-solarmach__dev__3_14"><span class="pill no-tests">no tests</span></a>
+    
+    <br><small style="color:#999">0.5.5.dev7+g562aafb53</small>
+  </td>
+  
+</tr>
+
+<tr>
+  <td><span class="pkg-name">spectroflat</span></td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-spectroflat__stable__3_12"><span class="pill install-fail">install fail</span></a>
+    
+    
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-spectroflat__pre__3_12"><span class="pill install-fail">install fail</span></a>
+    
+    
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-spectroflat__dev__3_12"><span class="pill install-fail">install fail</span></a>
+    
+    
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-spectroflat__stable__3_14"><span class="pill install-fail">install fail</span></a>
+    
+    
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-spectroflat__pre__3_14"><span class="pill install-fail">install fail</span></a>
+    
+    
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-spectroflat__dev__3_14"><span class="pill install-fail">install fail</span></a>
+    
+    
+  </td>
+  
+</tr>
+
+<tr>
+  <td><span class="pkg-name">xrtpy</span></td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.5.1</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.5.2rc0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.5.2rc1.dev1+gb60be80e4</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.5.1</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.5.2rc0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.5.2rc1.dev1+gb60be80e4</small>
+  </td>
+  
+</tr>
+
+
+<tr class="tier-header">
+  <th colspan="7">Provisional</th>
+</tr>
+
+<tr>
+  <td><span class="pkg-name">pyflct</span></td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.3.1</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.3.1</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.3.2.dev6+g250028870</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.3.1</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.3.1</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.3.2.dev6+g250028870</small>
+  </td>
+  
+</tr>
+
+<tr>
+  <td><span class="pkg-name">radiospectra</span></td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.1.dev17+g181771a44</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.0</small>
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.7.1.dev17+g181771a44</small>
+  </td>
+  
+</tr>
+
+<tr>
+  <td><span class="pkg-name">sunkit-spex</span></td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-sunkit-spex__stable__3_12"><span class="pill skipped">skipped</span></a>
+    
+    
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-sunkit-spex__pre__3_12"><span class="pill skipped">skipped</span></a>
+    
+    
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.5.1.dev21+gfdaf44a96</small>
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-sunkit-spex__stable__3_14"><span class="pill skipped">skipped</span></a>
+    
+    
+  </td>
+  
+  <td>
+    
+    <a class="cell-link" href="#log-sunkit-spex__pre__3_14"><span class="pill skipped">skipped</span></a>
+    
+    
+  </td>
+  
+  <td>
+    
+    <span class="pill pass">PASS</span>
+    
+    <br><small style="color:#999">0.5.1.dev21+gfdaf44a96</small>
+  </td>
+  
+</tr>
+
+
+</tbody>
+</table>
+
+<div class="legend">Legend:
+  <span class="pill pass">pass</span>
+  <span class="pill fail">fail</span>
+  <span class="pill timeout">timeout</span>
+  <span class="pill no-tests">no tests</span>
+  <span class="pill skipped">skipped</span>
+  <span class="pill install-fail">install fail</span>
+  <span class="pill missing">missing</span>
+</div>
+<p class="legend"><strong>skipped</strong>: resolver couldn't satisfy this package alongside the rest of the venv. <strong>install fail</strong>: install step crashed for some other reason (build error, etc.).</p>
+
+
+<h2>Failure logs</h2>
+<p class="legend">Click any non-passing badge above to jump to its log; the section will auto-expand.</p>
+
+<details id="log-dkist__stable__3_12">
+  <summary>
+    <span class="pkg-name">dkist</span>
+    <small style="color:#6a737d">(stable / Python 3.12)</small>
+    <span class="pill fail">FAIL</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>.....s.................................................................. [ 14%]
+.....................................................................sss [ 29%]
+sssssss................................................................. [ 43%]
+..................................................................FF.... [ 58%]
+.................................................s........sssss......... [ 72%]
+.............................sss........................................ [ 87%]
+................................................................         [100%]
+=================================== FAILURES ===================================
+E   TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+------------------------------ Captured log call -------------------------------
+WARNING  globus_sdk.response:response.py:93 response data did not parse as JSON, data=None
+/home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/globus_sdk/response.py:243: TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+E   TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+------------------------------ Captured log call -------------------------------
+WARNING  globus_sdk.response:response.py:93 response data did not parse as JSON, data=None
+/home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/globus_sdk/response.py:243: TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+=============================== warnings summary ===============================
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:47
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:47: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:64
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:64: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:70
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:70: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:179
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:179: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:197
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:197: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:208
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:208: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:34
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:34: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:61
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:61: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:75
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:75: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:222
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:222: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:228
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:228: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:251
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:251: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:263
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:263: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/io/dask/tests/test_file_manager.py:162
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/io/dask/tests/test_file_manager.py:162: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/sunpy/tests/helpers.py:135
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/sunpy/tests/helpers.py:135: PytestUnknownMarkWarning: Unknown pytest.mark.thread_unsafe - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.thread_unsafe(reason=&#34;modifies Fido registry&#34;)
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:37
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:37: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:50
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:50: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:78
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:78: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/data/tests/test_sample.py: 6 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_crop_dataset.py: 6 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py: 32 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_inversion.py: 24 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_load_dataset.py: 39 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_plotting.py: 7 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py: 36 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_dataset.py: 32 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_inversion.py: 4 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_models.py: 7 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_schema_infra.py: 2 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_tiled_dataset.py: 18 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/io/dask/tests/test_file_manager.py: 10 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/io/tests/test_file_manager.py: 26 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/io/tests/test_fits.py: 4 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_auth.py: 8 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_endpoints.py: 8 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_transfer.py: 9 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/net/tests/test_attr_walker.py: 44 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/net/tests/test_attrs.py: 1 warning
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/net/tests/test_attrs_values.py: 12 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/net/tests/test_client.py: 19 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/net/tests/test_helpers.py: 15 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py: 13 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_logger.py: 8 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/utils/tests/test_inventory.py: 3 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/utils/tests/test_sysinfo.py: 1 warning
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/wcs/tests/test_coupled_compound_model.py: 8 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/wcs/tests/test_models.py: 75 warnings
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/conftest.py:437: UserWarning: --ds and --tiled-ds were not found. Any supplied datasets will not be used.
+    warnings.warn(&#34;--ds and --tiled-ds were not found. Any supplied datasets will not be used.&#34;)
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py: 18 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_load_dataset.py: 18 warnings
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/io/tests/test_file_manager.py: 16 warnings
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/erfa/core.py:133: ErfaWarning: ERFA function &#34;dtf2d&#34; yielded 1 of &#34;dubious year (Note 6)&#34;
+    warn(f&#39;ERFA function &#34;{func_name}&#34; yielded {wmsg}&#39;, ErfaWarning)
+
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dask/array/core.py:1714: FutureWarning: Can&#39;t acquire a memory view of a Dask array. This will raise in the future.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+---------------------------------------------------------------------------------------------------------------- benchmark: 13 tests ----------------------------------------------------------------------------------------------------------------
+Name (time in us)                                    Min                       Max                      Mean                  StdDev                    Median                     IQR            Outliers          OPS            Rounds  Iterations
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test_update_celestial                            70.3150 (1.0)            145.8190 (1.0)             72.8077 (1.0)            4.0376 (1.0)             71.7680 (1.0)            1.1323 (1.0)       612;837  13,734.8035 (1.0)        7633           1
+test_raveled_tab1d_model                        190.9770 (2.72)           775.3670 (5.32)           205.8897 (2.83)          20.8938 (5.17)           199.3250 (2.78)          12.9390 (11.43)     117;104   4,856.9701 (0.35)       2232           1
+test_tileddataset_repr[simple-nomask]           358.2090 (5.09)           666.3520 (4.57)           384.1444 (5.28)          22.0553 (5.46)           380.6720 (5.30)          18.8038 (16.61)      125;69   2,603.1875 (0.19)       1781           1
+test_tileddataset_repr[simple-masked]           360.2420 (5.12)           601.1040 (4.12)           388.7133 (5.34)          23.4900 (5.82)           382.9560 (5.34)          22.0683 (19.49)     327;132   2,572.5905 (0.19)       1885           1
+test_dataset_repr                               806.6040 (11.47)      493,236.0960 (&gt;1000.0)      1,441.3537 (19.80)     17,091.0672 (&gt;1000.0)        841.7715 (11.73)         18.1670 (16.05)        1;62     693.7922 (0.05)        830           1
+test_generate_celestial                         860.7450 (12.24)        1,661.2100 (11.39)          962.0820 (13.21)        114.2007 (28.28)          909.6835 (12.68)        157.8070 (139.37)     121;18   1,039.4124 (0.08)        782           1
+test_slice_dataset                            9,982.7390 (141.97)      11,424.5590 (78.35)       10,508.5782 (144.33)       314.7817 (77.96)       10,494.3490 (146.23)       374.8292 (331.05)       21;3      95.1604 (0.01)         81           1
+test_pixel_to_world                          50,701.7450 (721.07)      64,187.4340 (440.19)      52,722.3071 (724.13)     3,777.8306 (935.66)      51,331.3520 (715.24)       992.2733 (876.37)        2;2      18.9673 (0.00)         21           1
+test_dataset_save[large_visp_dataset]       140,862.9190 (&gt;1000.0)    145,052.0610 (994.74)     141,936.2075 (&gt;1000.0)    1,403.1723 (347.52)     141,550.4085 (&gt;1000.0)    1,271.8435 (&gt;1000.0)       1;1       7.0454 (0.00)          8           1
+test_load_asdf                              193,205.3120 (&gt;1000.0)    197,443.7890 (&gt;1000.0)    195,313.7302 (&gt;1000.0)    1,778.1020 (440.38)     195,433.7450 (&gt;1000.0)    3,083.1110 (&gt;1000.0)       2;0       5.1200 (0.00)          5           1
+test_load_tiled_asdf                        262,062.4330 (&gt;1000.0)    706,271.0690 (&gt;1000.0)    355,830.7166 (&gt;1000.0)  195,950.2546 (&gt;1000.0)    268,850.2760 (&gt;1000.0)  116,010.7967 (&gt;1000.0)       1;1       2.8103 (0.00)          5           1
+test_dataset_save[inversion]                644,794.0650 (&gt;1000.0)  1,100,028.8150 (&gt;1000.0)    827,280.5378 (&gt;1000.0)  242,571.7323 (&gt;1000.0)    655,135.4650 (&gt;1000.0)  440,183.4650 (&gt;1000.0)       2;0       1.2088 (0.00)          5           1
+test_plot_dataset[axes0]                  1,267,095.9770 (&gt;1000.0)  1,275,648.7780 (&gt;1000.0)  1,271,972.6910 (&gt;1000.0)    3,223.1332 (798.28)   1,271,799.6620 (&gt;1000.0)    4,060.5987 (&gt;1000.0)       2;0       0.7862 (0.00)          5           1
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Legend:
+  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (InterQuartile Range) from 1st Quartile and 3rd Quartile.
+  OPS: Operations Per Second, computed as 1 / Mean
+=========================== short test summary info ============================
+FAILED .tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_transfer.py::test_process_event_list - TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+FAILED .tmp/int-stable-3.12-tol3q2t3/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_transfer.py::test_process_event_list_message_only - TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+2 failed, 474 passed, 20 skipped, 554 warnings in 125.76s (0:02:05)
+</pre>
+  
+</details>
+
+<details id="log-roentgen__stable__3_12">
+  <summary>
+    <span class="pkg-name">roentgen</span>
+    <small style="color:#6a737d">(stable / Python 3.12)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>
+no tests ran in 0.13s
+</pre>
+  
+</details>
+
+<details id="log-scope-emd__stable__3_12">
+  <summary>
+    <span class="pkg-name">scope-emd</span>
+    <small style="color:#6a737d">(stable / Python 3.12)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>
+no tests ran in 0.10s
+</pre>
+  
+</details>
+
+<details id="log-solarmach__stable__3_12">
+  <summary>
+    <span class="pkg-name">solarmach</span>
+    <small style="color:#6a737d">(stable / Python 3.12)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>
+no tests ran in 0.10s
+</pre>
+  
+</details>
+
+<details id="log-spectroflat__stable__3_12">
+  <summary>
+    <span class="pkg-name">spectroflat</span>
+    <small style="color:#6a737d">(stable / Python 3.12)</small>
+    <span class="pill install-fail">install fail</span>
+  </summary>
+  
+  <h3>Install error</h3>
+  <pre>error: Failed to build `spectroflat==2.1.1`
+  cause: The build backend returned an error
+  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)
+
+         [stderr]
+         Traceback (most recent call last):
+           File &#34;&lt;string&gt;&#34;, line 8, in &lt;module&gt;
+           File &#34;/home/runner/.cache/uv/builds-v0/.tmp6XACIw/lib/python3.12/site-packages/setuptools/__init__.py&#34;, line 10, in &lt;module&gt;
+             import distutils.core
+         ModuleNotFoundError: No module named &#39;distutils&#39;
+
+hint: `distutils` was removed from the standard library in Python 3.12. Consider adding a constraint (like `spectroflat &gt;2.1.1`) to avoid building a version of `spectroflat` that depends on `distutils`.
+</pre>
+  
+  
+</details>
+
+<details id="log-sunkit-spex__stable__3_12">
+  <summary>
+    <span class="pkg-name">sunkit-spex</span>
+    <small style="color:#6a737d">(stable / Python 3.12)</small>
+    <span class="pill skipped">skipped</span>
+  </summary>
+  
+  <h3>Install error</h3>
+  <pre>error: No solution found when resolving dependencies
+  cause: Because all versions of sunkit-spex depend on gwcs&gt;=0.26.0,&lt;1.0.0 and gwcs&gt;=1.0.3, we can conclude that all versions of sunkit-spex cannot be used.
+         And because you require sunkit-spex[tests]==0.5.0, we can conclude that your requirements are unsatisfiable.
+</pre>
+  
+  
+</details>
+
+<details id="log-dkist__pre__3_12">
+  <summary>
+    <span class="pkg-name">dkist</span>
+    <small style="color:#6a737d">(pre / Python 3.12)</small>
+    <span class="pill fail">FAIL</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>.....s.................................................................. [ 14%]
+.....................................................................sss [ 29%]
+sssssss................................................................. [ 43%]
+..................................................................FF.... [ 58%]
+.................................................s........sssss......... [ 72%]
+.............................sss........................................ [ 87%]
+................................................................         [100%]
+=================================== FAILURES ===================================
+E   TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+------------------------------ Captured log call -------------------------------
+WARNING  globus_sdk.response:response.py:93 response data did not parse as JSON, data=None
+/home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/globus_sdk/response.py:243: TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+E   TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+------------------------------ Captured log call -------------------------------
+WARNING  globus_sdk.response:response.py:93 response data did not parse as JSON, data=None
+/home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/globus_sdk/response.py:243: TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+=============================== warnings summary ===============================
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:47
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:47: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:64
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:64: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:70
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:70: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:179
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:179: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:197
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:197: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:208
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:208: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:34
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:34: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:61
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:61: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:75
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:75: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:222
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:222: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:228
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:228: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:251
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:251: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:263
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:263: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/io/dask/tests/test_file_manager.py:162
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/io/dask/tests/test_file_manager.py:162: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/sunpy/tests/helpers.py:135
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/sunpy/tests/helpers.py:135: PytestUnknownMarkWarning: Unknown pytest.mark.thread_unsafe - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.thread_unsafe(reason=&#34;modifies Fido registry&#34;)
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:37
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:37: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:50
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:50: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:78
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:78: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/data/tests/test_sample.py: 6 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_crop_dataset.py: 6 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py: 32 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_inversion.py: 24 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_load_dataset.py: 39 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_plotting.py: 7 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py: 36 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_dataset.py: 32 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_inversion.py: 4 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_models.py: 7 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_schema_infra.py: 2 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_tiled_dataset.py: 18 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/io/dask/tests/test_file_manager.py: 10 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/io/tests/test_file_manager.py: 26 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/io/tests/test_fits.py: 4 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_auth.py: 8 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_endpoints.py: 8 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_transfer.py: 9 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/net/tests/test_attr_walker.py: 44 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/net/tests/test_attrs.py: 1 warning
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/net/tests/test_attrs_values.py: 12 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/net/tests/test_client.py: 19 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/net/tests/test_helpers.py: 15 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py: 13 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_logger.py: 8 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/utils/tests/test_inventory.py: 3 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/utils/tests/test_sysinfo.py: 1 warning
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/wcs/tests/test_coupled_compound_model.py: 8 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/wcs/tests/test_models.py: 75 warnings
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/conftest.py:437: UserWarning: --ds and --tiled-ds were not found. Any supplied datasets will not be used.
+    warnings.warn(&#34;--ds and --tiled-ds were not found. Any supplied datasets will not be used.&#34;)
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py: 18 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_load_dataset.py: 18 warnings
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/io/tests/test_file_manager.py: 16 warnings
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/erfa/core.py:133: ErfaWarning: ERFA function &#34;dtf2d&#34; yielded 1 of &#34;dubious year (Note 6)&#34;
+    warn(f&#39;ERFA function &#34;{func_name}&#34; yielded {wmsg}&#39;, ErfaWarning)
+
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dask/array/core.py:1714: FutureWarning: Can&#39;t acquire a memory view of a Dask array. This will raise in the future.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+--------------------------------------------------------------------------------------------------------------- benchmark: 13 tests ----------------------------------------------------------------------------------------------------------------
+Name (time in us)                                    Min                       Max                      Mean                  StdDev                    Median                     IQR            Outliers         OPS            Rounds  Iterations
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test_update_celestial                           109.9360 (1.0)            251.2810 (1.0)            117.0621 (1.0)            8.4336 (1.0)            113.6830 (1.0)            4.4867 (1.0)       715;749  8,542.4735 (1.0)        5579           1
+test_raveled_tab1d_model                        320.3590 (2.91)           688.3390 (2.74)           362.1917 (3.09)          28.3884 (3.37)           358.0100 (3.15)          40.5255 (9.03)        586;8  2,760.9690 (0.32)       1744           1
+test_tileddataset_repr[simple-nomask]           564.9880 (5.14)           860.1910 (3.42)           600.2139 (5.13)          22.9283 (2.72)           601.0950 (5.29)          26.6370 (5.94)       343;65  1,666.0728 (0.20)       1359           1
+test_tileddataset_repr[simple-masked]           571.2390 (5.20)           783.9670 (3.12)           636.0784 (5.43)          27.6761 (3.28)           637.9840 (5.61)          35.9352 (8.01)       348;14  1,572.1333 (0.18)       1251           1
+test_dataset_repr                             1,211.3380 (11.02)        1,826.2790 (7.27)         1,259.7035 (10.76)         52.6001 (6.24)         1,247.2550 (10.97)         25.6608 (5.72)        43;49    793.8376 (0.09)        609           1
+test_generate_celestial                       1,370.5050 (12.47)        2,564.8510 (10.21)        1,502.1322 (12.83)        156.8675 (18.60)        1,433.9340 (12.61)        185.4245 (41.33)       53;17    665.7204 (0.08)        565           1
+test_slice_dataset                           13,568.0390 (123.42)      17,614.5130 (70.10)       14,675.0574 (125.36)       773.4082 (91.71)       14,548.9140 (127.98)     1,174.4685 (261.76)       18;1     68.1428 (0.01)         60           1
+test_pixel_to_world                          72,383.6380 (658.42)      74,555.9640 (296.70)      73,245.3714 (625.70)       591.4645 (70.13)       73,221.1350 (644.08)       875.9045 (195.22)        7;0     13.6527 (0.00)         15           1
+test_dataset_save[large_visp_dataset]       213,016.8960 (&gt;1000.0)    706,822.5850 (&gt;1000.0)    313,122.5248 (&gt;1000.0)  220,088.5553 (&gt;1000.0)    215,627.4930 (&gt;1000.0)  125,040.9482 (&gt;1000.0)       1;1      3.1936 (0.00)          5           1
+test_load_asdf                              275,641.2560 (&gt;1000.0)    285,205.6500 (&gt;1000.0)    279,948.1218 (&gt;1000.0)    4,594.8616 (544.83)     277,339.1740 (&gt;1000.0)    8,208.1938 (&gt;1000.0)       2;0      3.5721 (0.00)          5           1
+test_load_tiled_asdf                        370,884.4900 (&gt;1000.0)    771,764.5300 (&gt;1000.0)    453,862.9178 (&gt;1000.0)  177,729.2819 (&gt;1000.0)    376,317.8610 (&gt;1000.0)  102,978.2655 (&gt;1000.0)       1;1      2.2033 (0.00)          5           1
+test_dataset_save[inversion]                930,222.0840 (&gt;1000.0)  1,364,139.3230 (&gt;1000.0)  1,103,868.9198 (&gt;1000.0)  226,721.6956 (&gt;1000.0)    947,755.1550 (&gt;1000.0)  410,219.9810 (&gt;1000.0)       2;0      0.9059 (0.00)          5           1
+test_plot_dataset[axes0]                  1,765,579.5620 (&gt;1000.0)  1,799,517.4910 (&gt;1000.0)  1,779,154.5934 (&gt;1000.0)   13,021.0104 (&gt;1000.0)  1,775,295.8290 (&gt;1000.0)   16,705.6515 (&gt;1000.0)       2;0      0.5621 (0.00)          5           1
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Legend:
+  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (InterQuartile Range) from 1st Quartile and 3rd Quartile.
+  OPS: Operations Per Second, computed as 1 / Mean
+=========================== short test summary info ============================
+FAILED .tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_transfer.py::test_process_event_list - TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+FAILED .tmp/int-pre-3.12-6b0hej2a/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_transfer.py::test_process_event_list_message_only - TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+2 failed, 474 passed, 20 skipped, 554 warnings in 168.24s (0:02:48)
+</pre>
+  
+</details>
+
+<details id="log-roentgen__pre__3_12">
+  <summary>
+    <span class="pkg-name">roentgen</span>
+    <small style="color:#6a737d">(pre / Python 3.12)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>
+no tests ran in 0.18s
+</pre>
+  
+</details>
+
+<details id="log-scope-emd__pre__3_12">
+  <summary>
+    <span class="pkg-name">scope-emd</span>
+    <small style="color:#6a737d">(pre / Python 3.12)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>
+no tests ran in 0.14s
+</pre>
+  
+</details>
+
+<details id="log-solarmach__pre__3_12">
+  <summary>
+    <span class="pkg-name">solarmach</span>
+    <small style="color:#6a737d">(pre / Python 3.12)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>
+no tests ran in 0.13s
+</pre>
+  
+</details>
+
+<details id="log-spectroflat__pre__3_12">
+  <summary>
+    <span class="pkg-name">spectroflat</span>
+    <small style="color:#6a737d">(pre / Python 3.12)</small>
+    <span class="pill install-fail">install fail</span>
+  </summary>
+  
+  <h3>Install error</h3>
+  <pre>error: Failed to build `spectroflat==2.1.1`
+  cause: The build backend returned an error
+  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)
+
+         [stderr]
+         Traceback (most recent call last):
+           File &#34;&lt;string&gt;&#34;, line 8, in &lt;module&gt;
+           File &#34;/home/runner/.cache/uv/builds-v0/.tmp1yPcyn/lib/python3.12/site-packages/setuptools/__init__.py&#34;, line 10, in &lt;module&gt;
+             import distutils.core
+         ModuleNotFoundError: No module named &#39;distutils&#39;
+
+hint: `distutils` was removed from the standard library in Python 3.12. Consider adding a constraint (like `spectroflat &gt;2.1.1`) to avoid building a version of `spectroflat` that depends on `distutils`.
+</pre>
+  
+  
+</details>
+
+<details id="log-sunkit-spex__pre__3_12">
+  <summary>
+    <span class="pkg-name">sunkit-spex</span>
+    <small style="color:#6a737d">(pre / Python 3.12)</small>
+    <span class="pill skipped">skipped</span>
+  </summary>
+  
+  <h3>Install error</h3>
+  <pre>error: No solution found when resolving dependencies
+  cause: Because all versions of sunkit-spex depend on gwcs&gt;=0.26.0,&lt;1.0.0 and gwcs&gt;=1.0.3, we can conclude that all versions of sunkit-spex cannot be used.
+         And because you require sunkit-spex[tests]==0.5.0, we can conclude that your requirements are unsatisfiable.
+</pre>
+  
+  
+</details>
+
+<details id="log-dkist__dev__3_12">
+  <summary>
+    <span class="pkg-name">dkist</span>
+    <small style="color:#6a737d">(dev / Python 3.12)</small>
+    <span class="pill fail">FAIL</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>Collected 0 items to run in parallel
+.....s.................................................................. [ 14%]
+......................................s................................. [ 28%]
+.ssssssssss............................................................. [ 43%]
+.......................................................................F [ 57%]
+F.....................................................s........sssss.... [ 71%]
+..................................sss................................... [ 86%]
+.....................................................................    [100%]
+=================================== FAILURES ===================================
+E   TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+------------------------------ Captured log call -------------------------------
+WARNING  globus_sdk.response:response.py:93 response data did not parse as JSON, data=None
+/home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/globus_sdk/response.py:243: TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+E   TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+------------------------------ Captured log call -------------------------------
+WARNING  globus_sdk.response:response.py:93 response data did not parse as JSON, data=None
+/home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/globus_sdk/response.py:243: TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+=============================== warnings summary ===============================
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:47
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:47: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:64
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:64: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:70
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:70: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:179
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:179: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:197
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:197: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:208
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py:208: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:34
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:34: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:61
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:61: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:75
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:75: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:222
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:222: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:228
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:228: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:251
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:251: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:263
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py:263: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/io/dask/tests/test_file_manager.py:175
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/io/dask/tests/test_file_manager.py:175: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:36
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:36: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:49
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:49: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:77
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py:77: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/data/tests/test_sample.py: 6 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_crop_dataset.py: 6 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py: 32 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_inversion.py: 24 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_load_dataset.py: 43 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_plotting.py: 7 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_tiled_dataset.py: 36 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_dataset.py: 32 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_inversion.py: 4 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_models.py: 7 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_schema_infra.py: 2 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/io/asdf/tests/test_tiled_dataset.py: 18 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/io/dask/tests/test_file_manager.py: 11 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/io/tests/test_file_manager.py: 26 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/io/tests/test_fits.py: 4 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_auth.py: 8 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_endpoints.py: 8 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_transfer.py: 9 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/net/tests/test_attr_walker.py: 44 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/net/tests/test_attrs.py: 1 warning
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/net/tests/test_attrs_values.py: 12 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/net/tests/test_client.py: 19 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/net/tests/test_helpers.py: 15 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py: 13 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_logger.py: 8 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/utils/tests/test_inventory.py: 3 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/utils/tests/test_sysinfo.py: 1 warning
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/wcs/tests/test_coupled_compound_model.py: 8 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/wcs/tests/test_models.py: 75 warnings
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/conftest.py:437: UserWarning: --ds and --tiled-ds were not found. Any supplied datasets will not be used.
+    warnings.warn(&#34;--ds and --tiled-ds were not found. Any supplied datasets will not be used.&#34;)
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_dataset.py: 18 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/dataset/tests/test_load_dataset.py: 18 warnings
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/io/tests/test_file_manager.py: 16 warnings
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/erfa/core.py:523: ErfaWarning: ERFA function &#34;dtf2d&#34; yielded 1 of &#34;dubious year (Note 6)&#34;
+    warn(f&#39;ERFA function &#34;{func_name}&#34; yielded {wmsg}&#39;, ErfaWarning)
+
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dask/array/core.py:1714: FutureWarning: Can&#39;t acquire a memory view of a Dask array. This will raise in the future.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+--------------------------------------------------------------------------------------------------------------- benchmark: 13 tests ---------------------------------------------------------------------------------------------------------------
+Name (time in us)                                  Min                       Max                      Mean                  StdDev                    Median                     IQR            Outliers          OPS            Rounds  Iterations
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test_update_celestial                          51.7190 (1.0)            127.8010 (1.0)             55.8056 (1.0)            3.6326 (1.0)             54.7340 (1.0)            1.9503 (1.0)     1024;1077  17,919.3562 (1.0)        8997           1
+test_raveled_tab1d_model                      142.6370 (2.76)           689.5880 (5.40)           152.1341 (2.73)          19.5880 (5.39)           148.5850 (2.71)           4.5925 (2.35)       54;368   6,573.1491 (0.37)       2260           1
+test_tileddataset_repr[simple-masked]         267.3170 (5.17)           382.6740 (2.99)           287.4037 (5.15)          12.8529 (3.54)           285.8750 (5.22)          18.0460 (9.25)       603;29   3,479.4259 (0.19)       2250           1
+test_tileddataset_repr[simple-nomask]         270.7090 (5.23)           391.9740 (3.07)           302.1609 (5.41)          14.4487 (3.98)           300.8170 (5.50)          15.6260 (8.01)       562;63   3,309.4951 (0.18)       2131           1
+test_dataset_repr                             618.4680 (11.96)          969.5990 (7.59)           660.2179 (11.83)         26.7987 (7.38)           655.2260 (11.97)         21.2427 (10.89)      128;60   1,514.6514 (0.08)        953           1
+test_generate_celestial                       695.8520 (13.45)        1,267.5940 (9.92)           783.1449 (14.03)         90.2975 (24.86)          742.5045 (13.57)        124.8105 (64.00)      172;24   1,276.9029 (0.07)       1016           1
+test_slice_dataset                          7,264.9960 (140.47)       8,480.7910 (66.36)        7,622.2131 (136.59)       243.0365 (66.90)        7,607.7370 (138.99)       346.7880 (177.82)       39;1     131.1955 (0.01)        103           1
+test_pixel_to_world                        45,078.5590 (871.61)     403,732.6410 (&gt;1000.0)     62,969.0027 (&gt;1000.0)   76,120.5000 (&gt;1000.0)     46,898.3350 (856.84)     2,116.8620 (&gt;1000.0)       1;1      15.8808 (0.00)         22           1
+test_dataset_save[large_visp_dataset]     117,521.5080 (&gt;1000.0)    478,276.6020 (&gt;1000.0)    160,405.3698 (&gt;1000.0)  119,225.6776 (&gt;1000.0)    120,769.2600 (&gt;1000.0)    5,231.3955 (&gt;1000.0)       1;1       6.2342 (0.00)          9           1
+test_load_asdf                            156,974.4840 (&gt;1000.0)    160,561.8970 (&gt;1000.0)    158,409.1286 (&gt;1000.0)    1,441.6737 (396.87)     158,575.0170 (&gt;1000.0)    2,060.1115 (&gt;1000.0)       1;0       6.3128 (0.00)          5           1
+test_load_tiled_asdf                      210,944.2600 (&gt;1000.0)    525,947.4020 (&gt;1000.0)    277,808.3212 (&gt;1000.0)  138,766.0755 (&gt;1000.0)    218,766.6440 (&gt;1000.0)   83,933.2900 (&gt;1000.0)       1;1       3.5996 (0.00)          5           1
+test_dataset_save[inversion]              513,036.3860 (&gt;1000.0)  1,028,811.0770 (&gt;1000.0)    688,016.2570 (&gt;1000.0)  231,426.2227 (&gt;1000.0)    552,785.2260 (&gt;1000.0)  363,054.7087 (&gt;1000.0)       1;0       1.4535 (0.00)          5           1
+test_plot_dataset[axes0]                  994,291.5360 (&gt;1000.0)  1,036,670.9990 (&gt;1000.0)  1,013,219.7894 (&gt;1000.0)   17,301.3704 (&gt;1000.0)  1,006,749.6490 (&gt;1000.0)   27,208.7855 (&gt;1000.0)       2;0       0.9870 (0.00)          5           1
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Legend:
+  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (InterQuartile Range) from 1st Quartile and 3rd Quartile.
+  OPS: Operations Per Second, computed as 1 / Mean
+=========================== short test summary info ============================
+FAILED .tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_transfer.py::test_process_event_list - TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+FAILED .tmp/int-dev-3.12-g9j2na8f/venv/lib/python3.12/site-packages/dkist/net/globus/tests/test_transfer.py::test_process_event_list_message_only - TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+2 failed, 478 passed, 21 skipped, 558 warnings in 116.83s (0:01:56)
+</pre>
+  
+</details>
+
+<details id="log-scope-emd__dev__3_12">
+  <summary>
+    <span class="pkg-name">scope-emd</span>
+    <small style="color:#6a737d">(dev / Python 3.12)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>Collected 0 items to run in parallel
+
+no tests ran in 0.01s
+</pre>
+  
+</details>
+
+<details id="log-solarmach__dev__3_12">
+  <summary>
+    <span class="pkg-name">solarmach</span>
+    <small style="color:#6a737d">(dev / Python 3.12)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>Collected 0 items to run in parallel
+
+no tests ran in 0.01s
+</pre>
+  
+</details>
+
+<details id="log-spectroflat__dev__3_12">
+  <summary>
+    <span class="pkg-name">spectroflat</span>
+    <small style="color:#6a737d">(dev / Python 3.12)</small>
+    <span class="pill install-fail">install fail</span>
+  </summary>
+  
+  <h3>Install error</h3>
+  <pre>error: Failed to build `spectroflat @ git+https://gitlab.gwdg.de/hoelken/spectroflat`
+  cause: The build backend returned an error
+  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)
+
+         [stderr]
+         Traceback (most recent call last):
+           File &#34;&lt;string&gt;&#34;, line 8, in &lt;module&gt;
+           File &#34;/home/runner/.cache/uv/builds-v0/.tmpsBJTbU/lib/python3.12/site-packages/setuptools/__init__.py&#34;, line 10, in &lt;module&gt;
+             import distutils.core
+         ModuleNotFoundError: No module named &#39;distutils&#39;
+
+hint: `distutils` was removed from the standard library in Python 3.12. Consider adding a constraint to avoid building a package that depends on `distutils`.
+</pre>
+  
+  
+</details>
+
+<details id="log-dkist__stable__3_14">
+  <summary>
+    <span class="pkg-name">dkist</span>
+    <small style="color:#6a737d">(stable / Python 3.14)</small>
+    <span class="pill fail">FAIL</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>.....s.................................................................. [ 14%]
+.....................................................................sss [ 29%]
+sssssss................................................................. [ 43%]
+..................................................................FF.... [ 58%]
+.................................................s........sssss......... [ 72%]
+.............................sss........................................ [ 87%]
+................................................................         [100%]
+=================================== FAILURES ===================================
+E   TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+------------------------------ Captured log call -------------------------------
+WARNING  globus_sdk.response:response.py:93 response data did not parse as JSON, data=None
+/home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/globus_sdk/response.py:243: TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+E   TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+------------------------------ Captured log call -------------------------------
+WARNING  globus_sdk.response:response.py:93 response data did not parse as JSON, data=None
+/home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/globus_sdk/response.py:243: TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+=============================== warnings summary ===============================
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:47
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:47: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:64
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:64: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:70
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:70: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:179
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:179: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:197
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:197: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:208
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:208: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:34
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:34: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:61
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:61: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:75
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:75: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:222
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:222: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:228
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:228: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:251
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:251: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:263
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:263: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/io/dask/tests/test_file_manager.py:162
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/io/dask/tests/test_file_manager.py:162: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/sunpy/tests/helpers.py:135
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/sunpy/tests/helpers.py:135: PytestUnknownMarkWarning: Unknown pytest.mark.thread_unsafe - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.thread_unsafe(reason=&#34;modifies Fido registry&#34;)
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:37
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:37: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:50
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:50: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:78
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:78: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/data/tests/test_sample.py: 6 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_crop_dataset.py: 6 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py: 32 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_inversion.py: 24 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_load_dataset.py: 39 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_plotting.py: 7 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py: 36 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_dataset.py: 32 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_inversion.py: 4 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_models.py: 7 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_schema_infra.py: 2 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_tiled_dataset.py: 18 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/io/dask/tests/test_file_manager.py: 10 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/io/tests/test_file_manager.py: 26 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/io/tests/test_fits.py: 4 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_auth.py: 8 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_endpoints.py: 8 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_transfer.py: 9 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/net/tests/test_attr_walker.py: 44 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/net/tests/test_attrs.py: 1 warning
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/net/tests/test_attrs_values.py: 12 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/net/tests/test_client.py: 19 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/net/tests/test_helpers.py: 15 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py: 13 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_logger.py: 8 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/utils/tests/test_inventory.py: 3 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/utils/tests/test_sysinfo.py: 1 warning
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/wcs/tests/test_coupled_compound_model.py: 8 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/wcs/tests/test_models.py: 75 warnings
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/conftest.py:437: UserWarning: --ds and --tiled-ds were not found. Any supplied datasets will not be used.
+    warnings.warn(&#34;--ds and --tiled-ds were not found. Any supplied datasets will not be used.&#34;)
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py: 18 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_load_dataset.py: 18 warnings
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/io/tests/test_file_manager.py: 16 warnings
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/erfa/core.py:133: ErfaWarning: ERFA function &#34;dtf2d&#34; yielded 1 of &#34;dubious year (Note 6)&#34;
+    warn(f&#39;ERFA function &#34;{func_name}&#34; yielded {wmsg}&#39;, ErfaWarning)
+
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dask/array/core.py:1714: FutureWarning: Can&#39;t acquire a memory view of a Dask array. This will raise in the future.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+------------------------------------------------------------------------------------------------------------ benchmark: 13 tests ------------------------------------------------------------------------------------------------------------
+Name (time in us)                                  Min                     Max                    Mean                  StdDev                  Median                     IQR            Outliers          OPS            Rounds  Iterations
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test_update_celestial                          36.6450 (1.0)           58.7580 (1.0)           37.5482 (1.0)            1.3596 (1.0)           37.2660 (1.0)            0.2700 (1.0)       631;889  26,632.4564 (1.0)       13111           1
+test_raveled_tab1d_model                       92.2770 (2.52)         566.7340 (9.65)          97.1193 (2.59)           9.0220 (6.64)          95.5620 (2.56)           1.7520 (6.49)      272;513  10,296.6128 (0.39)       3946           1
+test_tileddataset_repr[simple-nomask]         177.5640 (4.85)         263.0920 (4.48)         187.3784 (4.99)           7.5045 (5.52)         184.3950 (4.95)           8.7675 (32.47)      496;61   5,336.7936 (0.20)       2915           1
+test_tileddataset_repr[simple-masked]         179.9980 (4.91)         310.8020 (5.29)         188.1272 (5.01)           7.8692 (5.79)         185.2560 (4.97)           6.2590 (23.18)     446;194   5,315.5534 (0.20)       3009           1
+test_dataset_repr                             412.2040 (11.25)        745.7600 (12.69)        433.4639 (11.54)         22.9736 (16.90)        430.1705 (11.54)         13.8550 (51.31)       59;56   2,306.9972 (0.09)       1248           1
+test_generate_celestial                       440.0650 (12.01)      1,010.1130 (17.19)        487.9321 (12.99)         87.1956 (64.13)        458.8380 (12.31)         13.3300 (49.37)     148;179   2,049.4656 (0.08)       1414           1
+test_slice_dataset                          5,282.7010 (144.16)   488,553.5030 (&gt;1000.0)    8,794.8315 (234.23)    39,306.3422 (&gt;1000.0)    5,347.6380 (143.50)       106.9198 (396.00)       1;28     113.7031 (0.00)        151           1
+test_pixel_to_world                        20,929.8920 (571.15)    21,787.9890 (370.81)    21,373.1046 (569.22)       182.6374 (134.33)    21,369.2760 (573.43)       210.4933 (779.60)       13;1      46.7878 (0.00)         45           1
+test_dataset_save[large_visp_dataset]      69,319.4840 (&gt;1000.0)   72,675.8740 (&gt;1000.0)   71,029.1305 (&gt;1000.0)      761.0429 (559.76)    70,930.0435 (&gt;1000.0)      633.9430 (&gt;1000.0)       3;2      14.0787 (0.00)         14           1
+test_load_asdf                             92,250.7370 (&gt;1000.0)  647,427.7980 (&gt;1000.0)  150,506.3054 (&gt;1000.0)  164,943.9398 (&gt;1000.0)  102,117.0690 (&gt;1000.0)   14,501.5017 (&gt;1000.0)       1;1       6.6442 (0.00)         11           1
+test_load_tiled_asdf                      130,093.5800 (&gt;1000.0)  572,043.1510 (&gt;1000.0)  242,439.9617 (&gt;1000.0)  199,312.0885 (&gt;1000.0)  136,160.8470 (&gt;1000.0)  220,880.1195 (&gt;1000.0)       2;0       4.1247 (0.00)          8           1
+test_dataset_save[inversion]              327,232.6850 (&gt;1000.0)  776,688.4490 (&gt;1000.0)  424,360.8368 (&gt;1000.0)  197,151.3458 (&gt;1000.0)  340,843.5230 (&gt;1000.0)  127,116.9203 (&gt;1000.0)       1;1       2.3565 (0.00)          5           1
+test_plot_dataset[axes0]                  619,865.8590 (&gt;1000.0)  649,400.5040 (&gt;1000.0)  630,910.5052 (&gt;1000.0)   11,290.5930 (&gt;1000.0)  628,454.4680 (&gt;1000.0)   12,952.5755 (&gt;1000.0)       1;0       1.5850 (0.00)          5           1
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Legend:
+  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (InterQuartile Range) from 1st Quartile and 3rd Quartile.
+  OPS: Operations Per Second, computed as 1 / Mean
+=========================== short test summary info ============================
+FAILED .tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_transfer.py::test_process_event_list - TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+FAILED .tmp/int-stable-3.14-l98ex8fu/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_transfer.py::test_process_event_list_message_only - TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+2 failed, 474 passed, 20 skipped, 554 warnings in 79.24s (0:01:19)
+</pre>
+  
+</details>
+
+<details id="log-roentgen__stable__3_14">
+  <summary>
+    <span class="pkg-name">roentgen</span>
+    <small style="color:#6a737d">(stable / Python 3.14)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>
+no tests ran in 0.08s
+</pre>
+  
+</details>
+
+<details id="log-scope-emd__stable__3_14">
+  <summary>
+    <span class="pkg-name">scope-emd</span>
+    <small style="color:#6a737d">(stable / Python 3.14)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>
+no tests ran in 0.06s
+</pre>
+  
+</details>
+
+<details id="log-solarmach__stable__3_14">
+  <summary>
+    <span class="pkg-name">solarmach</span>
+    <small style="color:#6a737d">(stable / Python 3.14)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>
+no tests ran in 0.06s
+</pre>
+  
+</details>
+
+<details id="log-spectroflat__stable__3_14">
+  <summary>
+    <span class="pkg-name">spectroflat</span>
+    <small style="color:#6a737d">(stable / Python 3.14)</small>
+    <span class="pill install-fail">install fail</span>
+  </summary>
+  
+  <h3>Install error</h3>
+  <pre>error: Failed to build `spectroflat==2.1.1`
+  cause: The build backend returned an error
+  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)
+
+         [stderr]
+         Traceback (most recent call last):
+           File &#34;&lt;string&gt;&#34;, line 8, in &lt;module&gt;
+             from setuptools.build_meta import __legacy__ as backend
+           File &#34;/home/runner/.cache/uv/builds-v0/.tmpnuifrA/lib/python3.14/site-packages/setuptools/__init__.py&#34;, line 10, in &lt;module&gt;
+             import distutils.core
+         ModuleNotFoundError: No module named &#39;distutils&#39;
+
+hint: `distutils` was removed from the standard library in Python 3.12. Consider adding a constraint (like `spectroflat &gt;2.1.1`) to avoid building a version of `spectroflat` that depends on `distutils`.
+</pre>
+  
+  
+</details>
+
+<details id="log-sunkit-spex__stable__3_14">
+  <summary>
+    <span class="pkg-name">sunkit-spex</span>
+    <small style="color:#6a737d">(stable / Python 3.14)</small>
+    <span class="pill skipped">skipped</span>
+  </summary>
+  
+  <h3>Install error</h3>
+  <pre>error: No solution found when resolving dependencies
+  cause: Because all versions of sunkit-spex depend on gwcs&gt;=0.26.0,&lt;1.0.0 and gwcs&gt;=1.0.3, we can conclude that all versions of sunkit-spex cannot be used.
+         And because you require sunkit-spex[tests]==0.5.0, we can conclude that your requirements are unsatisfiable.
+</pre>
+  
+  
+</details>
+
+<details id="log-dkist__pre__3_14">
+  <summary>
+    <span class="pkg-name">dkist</span>
+    <small style="color:#6a737d">(pre / Python 3.14)</small>
+    <span class="pill fail">FAIL</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>.....s.................................................................. [ 14%]
+.....................................................................sss [ 29%]
+sssssss................................................................. [ 43%]
+..................................................................FF.... [ 58%]
+.................................................s........sssss......... [ 72%]
+.............................sss........................................ [ 87%]
+................................................................         [100%]
+=================================== FAILURES ===================================
+E   TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+------------------------------ Captured log call -------------------------------
+WARNING  globus_sdk.response:response.py:93 response data did not parse as JSON, data=None
+/home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/globus_sdk/response.py:243: TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+E   TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+------------------------------ Captured log call -------------------------------
+WARNING  globus_sdk.response:response.py:93 response data did not parse as JSON, data=None
+/home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/globus_sdk/response.py:243: TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+=============================== warnings summary ===============================
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:47
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:47: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:64
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:64: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:70
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:70: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:179
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:179: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:197
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:197: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:208
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:208: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:34
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:34: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:61
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:61: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:75
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:75: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:222
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:222: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:228
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:228: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:251
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:251: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:263
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:263: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/io/dask/tests/test_file_manager.py:162
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/io/dask/tests/test_file_manager.py:162: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/sunpy/tests/helpers.py:135
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/sunpy/tests/helpers.py:135: PytestUnknownMarkWarning: Unknown pytest.mark.thread_unsafe - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.thread_unsafe(reason=&#34;modifies Fido registry&#34;)
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:37
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:37: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:50
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:50: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:78
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:78: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/data/tests/test_sample.py: 6 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_crop_dataset.py: 6 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py: 32 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_inversion.py: 24 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_load_dataset.py: 39 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_plotting.py: 7 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py: 36 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_dataset.py: 32 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_inversion.py: 4 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_models.py: 7 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_schema_infra.py: 2 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_tiled_dataset.py: 18 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/io/dask/tests/test_file_manager.py: 10 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/io/tests/test_file_manager.py: 26 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/io/tests/test_fits.py: 4 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_auth.py: 8 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_endpoints.py: 8 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_transfer.py: 9 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/net/tests/test_attr_walker.py: 44 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/net/tests/test_attrs.py: 1 warning
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/net/tests/test_attrs_values.py: 12 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/net/tests/test_client.py: 19 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/net/tests/test_helpers.py: 15 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py: 13 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_logger.py: 8 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/utils/tests/test_inventory.py: 3 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/utils/tests/test_sysinfo.py: 1 warning
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/wcs/tests/test_coupled_compound_model.py: 8 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/wcs/tests/test_models.py: 75 warnings
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/conftest.py:437: UserWarning: --ds and --tiled-ds were not found. Any supplied datasets will not be used.
+    warnings.warn(&#34;--ds and --tiled-ds were not found. Any supplied datasets will not be used.&#34;)
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py: 18 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_load_dataset.py: 18 warnings
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/io/tests/test_file_manager.py: 16 warnings
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/erfa/core.py:133: ErfaWarning: ERFA function &#34;dtf2d&#34; yielded 1 of &#34;dubious year (Note 6)&#34;
+    warn(f&#39;ERFA function &#34;{func_name}&#34; yielded {wmsg}&#39;, ErfaWarning)
+
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dask/array/core.py:1714: FutureWarning: Can&#39;t acquire a memory view of a Dask array. This will raise in the future.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+----------------------------------------------------------------------------------------------------------- benchmark: 13 tests ------------------------------------------------------------------------------------------------------------
+Name (time in us)                                  Min                     Max                    Mean                  StdDev                  Median                    IQR            Outliers          OPS            Rounds  Iterations
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test_update_celestial                          48.7490 (1.0)          117.6420 (1.0)           53.4995 (1.0)            3.5206 (1.0)           52.6505 (1.0)           2.1150 (1.0)       985;926  18,691.7604 (1.0)        8950           1
+test_raveled_tab1d_model                      154.0080 (3.16)         279.1870 (2.37)         168.1777 (3.14)          19.5277 (5.55)         162.3475 (3.08)         10.2910 (4.87)      149;163   5,946.0920 (0.32)       2462           1
+test_tileddataset_repr[simple-masked]         289.0540 (5.93)         505.3590 (4.30)         321.2199 (6.00)          21.6455 (6.15)         316.4910 (6.01)         24.4695 (11.57)      495;83   3,113.1325 (0.17)       2003           1
+test_tileddataset_repr[simple-nomask]         291.5150 (5.98)         470.9890 (4.00)         320.2242 (5.99)          17.1258 (4.86)         317.6230 (6.03)         21.6675 (10.24)      569;32   3,122.8123 (0.17)       1955           1
+test_dataset_repr                             637.3560 (13.07)      1,027.5970 (8.73)         682.0659 (12.75)         35.6343 (10.12)        679.2275 (12.90)        24.2690 (11.47)       57;26   1,466.1341 (0.08)        982           1
+test_generate_celestial                       672.4260 (13.79)      5,214.6400 (44.33)        789.1958 (14.75)        205.6534 (58.41)        732.9810 (13.92)        27.3288 (12.92)     108;150   1,267.1127 (0.07)       1037           1
+test_slice_dataset                          7,053.7630 (144.70)     9,763.5940 (82.99)      7,490.5356 (140.01)       747.8380 (212.42)     7,166.0220 (136.11)      206.2253 (97.51)       17;18     133.5018 (0.01)        107           1
+test_pixel_to_world                        36,082.3710 (740.17)    36,901.8650 (313.68)    36,385.0429 (680.10)       214.0665 (60.80)     36,367.9275 (690.74)      259.4730 (122.68)        7;2      27.4838 (0.00)         26           1
+test_dataset_save[large_visp_dataset]      98,826.3140 (&gt;1000.0)   99,795.8060 (848.30)    99,432.7191 (&gt;1000.0)      337.4277 (95.84)     99,462.8320 (&gt;1000.0)     532.3750 (251.71)        3;0      10.0571 (0.00)         10           1
+test_load_asdf                            131,947.5150 (&gt;1000.0)  576,790.2280 (&gt;1000.0)  197,090.1511 (&gt;1000.0)  167,439.7437 (&gt;1000.0)  133,172.1150 (&gt;1000.0)   3,397.9505 (&gt;1000.0)       1;1       5.0738 (0.00)          7           1
+test_load_tiled_asdf                      184,391.0420 (&gt;1000.0)  533,575.3240 (&gt;1000.0)  244,978.3080 (&gt;1000.0)  141,398.8840 (&gt;1000.0)  188,553.2340 (&gt;1000.0)   4,507.3100 (&gt;1000.0)       1;1       4.0820 (0.00)          6           1
+test_dataset_save[inversion]              431,487.9610 (&gt;1000.0)  718,398.7650 (&gt;1000.0)  491,430.7994 (&gt;1000.0)  126,897.9403 (&gt;1000.0)  434,899.3040 (&gt;1000.0)  73,981.8118 (&gt;1000.0)       1;1       2.0349 (0.00)          5           1
+test_plot_dataset[axes0]                  946,049.9850 (&gt;1000.0)  952,907.9480 (&gt;1000.0)  949,823.7980 (&gt;1000.0)    2,734.1774 (776.63)   949,480.8960 (&gt;1000.0)   4,201.6385 (&gt;1000.0)       2;0       1.0528 (0.00)          5           1
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Legend:
+  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (InterQuartile Range) from 1st Quartile and 3rd Quartile.
+  OPS: Operations Per Second, computed as 1 / Mean
+=========================== short test summary info ============================
+FAILED .tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_transfer.py::test_process_event_list - TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+FAILED .tmp/int-pre-3.14-p9wwoyki/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_transfer.py::test_process_event_list_message_only - TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+2 failed, 474 passed, 20 skipped, 554 warnings in 104.54s (0:01:44)
+</pre>
+  
+</details>
+
+<details id="log-roentgen__pre__3_14">
+  <summary>
+    <span class="pkg-name">roentgen</span>
+    <small style="color:#6a737d">(pre / Python 3.14)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>
+no tests ran in 0.10s
+</pre>
+  
+</details>
+
+<details id="log-scope-emd__pre__3_14">
+  <summary>
+    <span class="pkg-name">scope-emd</span>
+    <small style="color:#6a737d">(pre / Python 3.14)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>
+no tests ran in 0.08s
+</pre>
+  
+</details>
+
+<details id="log-solarmach__pre__3_14">
+  <summary>
+    <span class="pkg-name">solarmach</span>
+    <small style="color:#6a737d">(pre / Python 3.14)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>
+no tests ran in 0.08s
+</pre>
+  
+</details>
+
+<details id="log-spectroflat__pre__3_14">
+  <summary>
+    <span class="pkg-name">spectroflat</span>
+    <small style="color:#6a737d">(pre / Python 3.14)</small>
+    <span class="pill install-fail">install fail</span>
+  </summary>
+  
+  <h3>Install error</h3>
+  <pre>error: Failed to build `spectroflat==2.1.1`
+  cause: The build backend returned an error
+  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)
+
+         [stderr]
+         Traceback (most recent call last):
+           File &#34;&lt;string&gt;&#34;, line 8, in &lt;module&gt;
+             from setuptools.build_meta import __legacy__ as backend
+           File &#34;/home/runner/.cache/uv/builds-v0/.tmp1ae43Q/lib/python3.14/site-packages/setuptools/__init__.py&#34;, line 10, in &lt;module&gt;
+             import distutils.core
+         ModuleNotFoundError: No module named &#39;distutils&#39;
+
+hint: `distutils` was removed from the standard library in Python 3.12. Consider adding a constraint (like `spectroflat &gt;2.1.1`) to avoid building a version of `spectroflat` that depends on `distutils`.
+</pre>
+  
+  
+</details>
+
+<details id="log-sunkit-spex__pre__3_14">
+  <summary>
+    <span class="pkg-name">sunkit-spex</span>
+    <small style="color:#6a737d">(pre / Python 3.14)</small>
+    <span class="pill skipped">skipped</span>
+  </summary>
+  
+  <h3>Install error</h3>
+  <pre>error: No solution found when resolving dependencies
+  cause: Because all versions of sunkit-spex depend on gwcs&gt;=0.26.0,&lt;1.0.0 and gwcs&gt;=1.0.3, we can conclude that all versions of sunkit-spex cannot be used.
+         And because you require sunkit-spex[tests]==0.5.0, we can conclude that your requirements are unsatisfiable.
+</pre>
+  
+  
+</details>
+
+<details id="log-dkist__dev__3_14">
+  <summary>
+    <span class="pkg-name">dkist</span>
+    <small style="color:#6a737d">(dev / Python 3.14)</small>
+    <span class="pill fail">FAIL</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>Collected 0 items to run in parallel
+.....s.................................................................. [ 14%]
+......................................s................................. [ 28%]
+.ssssssssss............................................................. [ 43%]
+.......................................................................F [ 57%]
+F.....................................................s........sssss.... [ 71%]
+..................................sss................................... [ 86%]
+.....................................................................    [100%]
+=================================== FAILURES ===================================
+E   TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+------------------------------ Captured log call -------------------------------
+WARNING  globus_sdk.response:response.py:93 response data did not parse as JSON, data=None
+/home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/globus_sdk/response.py:243: TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+E   TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+------------------------------ Captured log call -------------------------------
+WARNING  globus_sdk.response:response.py:93 response data did not parse as JSON, data=None
+/home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/globus_sdk/response.py:243: TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+=============================== warnings summary ===============================
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:47
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:47: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:64
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:64: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:70
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:70: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:179
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:179: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:197
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:197: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:208
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py:208: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:34
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:34: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:61
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:61: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:75
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:75: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:222
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:222: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:228
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:228: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:251
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:251: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:263
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py:263: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_tiled_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_tiled_dataset
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/io/dask/tests/test_file_manager.py:175
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/io/dask/tests/test_file_manager.py:175: PytestUnknownMarkWarning: Unknown pytest.mark.accept_cli_dataset - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.accept_cli_dataset
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:36
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:36: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:49
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:49: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:77
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py:77: PytestUnknownMarkWarning: Unknown pytest.mark.walltime - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.walltime
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/data/tests/test_sample.py: 6 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_crop_dataset.py: 6 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py: 32 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_inversion.py: 24 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_load_dataset.py: 43 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_plotting.py: 7 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_tiled_dataset.py: 36 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_dataset.py: 32 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_inversion.py: 4 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_models.py: 7 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_schema_infra.py: 2 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/io/asdf/tests/test_tiled_dataset.py: 18 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/io/dask/tests/test_file_manager.py: 11 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/io/tests/test_file_manager.py: 26 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/io/tests/test_fits.py: 4 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_auth.py: 8 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_endpoints.py: 8 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_transfer.py: 9 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/net/tests/test_attr_walker.py: 44 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/net/tests/test_attrs.py: 1 warning
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/net/tests/test_attrs_values.py: 12 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/net/tests/test_client.py: 19 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/net/tests/test_helpers.py: 15 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py: 13 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_logger.py: 8 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/utils/tests/test_inventory.py: 3 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/utils/tests/test_sysinfo.py: 1 warning
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/wcs/tests/test_coupled_compound_model.py: 8 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/wcs/tests/test_models.py: 75 warnings
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/conftest.py:437: UserWarning: --ds and --tiled-ds were not found. Any supplied datasets will not be used.
+    warnings.warn(&#34;--ds and --tiled-ds were not found. Any supplied datasets will not be used.&#34;)
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_dataset.py: 18 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/dataset/tests/test_load_dataset.py: 18 warnings
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/io/tests/test_file_manager.py: 16 warnings
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/erfa/core.py:523: ErfaWarning: ERFA function &#34;dtf2d&#34; yielded 1 of &#34;dubious year (Note 6)&#34;
+    warn(f&#39;ERFA function &#34;{func_name}&#34; yielded {wmsg}&#39;, ErfaWarning)
+
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/tests/test_benchmarks.py::test_plot_dataset[axes0]
+  /home/runner/work/sunpy-integration-testing/sunpy-integration-testing/.tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dask/array/core.py:1714: FutureWarning: Can&#39;t acquire a memory view of a Dask array. This will raise in the future.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+------------------------------------------------------------------------------------------------------------ benchmark: 13 tests ------------------------------------------------------------------------------------------------------------
+Name (time in us)                                  Min                     Max                    Mean                  StdDev                  Median                     IQR            Outliers          OPS            Rounds  Iterations
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test_update_celestial                          36.3450 (1.0)          571.6740 (2.16)          38.4109 (1.0)            6.4282 (1.0)           37.9670 (1.0)            0.7710 (1.0)       139;582  26,034.2867 (1.0)       11390           1
+test_raveled_tab1d_model                       90.9970 (2.50)         264.6900 (1.0)          101.6577 (2.65)           9.7394 (1.52)          96.8760 (2.55)          10.9460 (14.20)      596;85   9,836.9302 (0.38)       2810           1
+test_tileddataset_repr[simple-nomask]         174.0840 (4.79)         403.6700 (1.53)         187.5616 (4.88)          13.6057 (2.12)         181.0685 (4.77)          14.0410 (18.21)     576;144   5,331.5820 (0.20)       2910           1
+test_tileddataset_repr[simple-masked]         175.0240 (4.82)         287.6040 (1.09)         185.4845 (4.83)          10.0435 (1.56)         182.1000 (4.80)           8.7230 (11.31)     286;148   5,391.2855 (0.21)       2756           1
+test_dataset_repr                             398.3720 (10.96)      2,722.1740 (10.28)        455.9584 (11.87)        140.1505 (21.80)        419.4540 (11.05)         16.8860 (21.90)      90;141   2,193.1827 (0.08)       1234           1
+test_generate_celestial                       424.7010 (11.69)      1,252.0820 (4.73)         477.2383 (12.42)         93.1016 (14.48)        446.5745 (11.76)         16.5640 (21.48)     135;156   2,095.3892 (0.08)       1294           1
+test_slice_dataset                          4,952.1750 (136.25)   515,921.1420 (&gt;1000.0)    8,937.9650 (232.69)    42,697.7473 (&gt;1000.0)    5,217.0340 (137.41)       331.0950 (429.44)       1;25     111.8823 (0.00)        143           1
+test_pixel_to_world                        20,874.1940 (574.33)    22,562.4150 (85.24)     21,483.0521 (559.30)       411.6188 (64.03)     21,343.5335 (562.16)       718.5150 (931.93)       18;0      46.5483 (0.00)         46           1
+test_dataset_save[large_visp_dataset]      68,997.1440 (&gt;1000.0)   85,335.3650 (322.40)    73,965.6725 (&gt;1000.0)    4,284.5857 (666.53)    72,488.3800 (&gt;1000.0)    3,888.4060 (&gt;1000.0)       4;1      13.5198 (0.00)         14           1
+test_load_asdf                             93,858.4660 (&gt;1000.0)  587,597.4720 (&gt;1000.0)  145,511.2568 (&gt;1000.0)  155,345.0352 (&gt;1000.0)   96,799.1005 (&gt;1000.0)    3,062.7280 (&gt;1000.0)       1;1       6.8723 (0.00)         10           1
+test_load_tiled_asdf                      129,108.3950 (&gt;1000.0)  618,669.4330 (&gt;1000.0)  252,600.2314 (&gt;1000.0)  217,904.5358 (&gt;1000.0)  136,428.7530 (&gt;1000.0)  231,805.1925 (&gt;1000.0)       2;0       3.9588 (0.00)          8           1
+test_dataset_save[inversion]              319,450.4980 (&gt;1000.0)  808,851.4270 (&gt;1000.0)  518,574.2928 (&gt;1000.0)  258,882.2426 (&gt;1000.0)  336,745.2950 (&gt;1000.0)  469,294.9793 (&gt;1000.0)       2;0       1.9284 (0.00)          5           1
+test_plot_dataset[axes0]                  606,506.0390 (&gt;1000.0)  625,892.3450 (&gt;1000.0)  616,328.3480 (&gt;1000.0)    8,545.7655 (&gt;1000.0)  618,434.6350 (&gt;1000.0)   15,348.1133 (&gt;1000.0)       2;0       1.6225 (0.00)          5           1
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Legend:
+  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (InterQuartile Range) from 1st Quartile and 3rd Quartile.
+  OPS: Operations Per Second, computed as 1 / Mean
+=========================== short test summary info ============================
+FAILED .tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_transfer.py::test_process_event_list - TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+FAILED .tmp/int-dev-3.14-487u83wg/venv/lib/python3.14/site-packages/dkist/net/globus/tests/test_transfer.py::test_process_event_list_message_only - TypeError: Cannot iterate on IterableResponse data when type is &#39;NoneType&#39;
+2 failed, 478 passed, 21 skipped, 558 warnings in 83.57s (0:01:23)
+</pre>
+  
+</details>
+
+<details id="log-scope-emd__dev__3_14">
+  <summary>
+    <span class="pkg-name">scope-emd</span>
+    <small style="color:#6a737d">(dev / Python 3.14)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>Collected 0 items to run in parallel
+
+no tests ran in 0.01s
+</pre>
+  
+</details>
+
+<details id="log-solarmach__dev__3_14">
+  <summary>
+    <span class="pkg-name">solarmach</span>
+    <small style="color:#6a737d">(dev / Python 3.14)</small>
+    <span class="pill no-tests">no tests</span>
+  </summary>
+  
+  
+  <h3>Test output</h3>
+  <pre>Collected 0 items to run in parallel
+
+no tests ran in 0.00s
+</pre>
+  
+</details>
+
+<details id="log-spectroflat__dev__3_14">
+  <summary>
+    <span class="pkg-name">spectroflat</span>
+    <small style="color:#6a737d">(dev / Python 3.14)</small>
+    <span class="pill install-fail">install fail</span>
+  </summary>
+  
+  <h3>Install error</h3>
+  <pre>error: Failed to build `spectroflat @ git+https://gitlab.gwdg.de/hoelken/spectroflat`
+  cause: The build backend returned an error
+  cause: Call to `setuptools.build_meta:__legacy__.get_requires_for_build_wheel` failed (exit status: 1)
+
+         [stderr]
+         Traceback (most recent call last):
+           File &#34;&lt;string&gt;&#34;, line 8, in &lt;module&gt;
+             from setuptools.build_meta import __legacy__ as backend
+           File &#34;/home/runner/.cache/uv/builds-v0/.tmpVjf6jw/lib/python3.14/site-packages/setuptools/__init__.py&#34;, line 10, in &lt;module&gt;
+             import distutils.core
+         ModuleNotFoundError: No module named &#39;distutils&#39;
+
+hint: `distutils` was removed from the standard library in Python 3.12. Consider adding a constraint to avoid building a package that depends on `distutils`.
+</pre>
+  
+  
+</details>
+
+
+
+
+<h2>Installed packages</h2>
+<p class="legend">Full <code>uv pip freeze</code> of the shared venv for each variant that ran.</p>
+
+
+<details>
+  <summary>
+    <code>stable</code> / Python <code>3.12</code>
+    <small style="color:#6a737d">(203 packages)</small>
+  </summary>
+  <pre>aiapy==0.12.1
+aioftp==0.28.3
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.3
+aiosignal==1.4.0
+appdirs==1.4.4
+array-api-compat==1.15.0
+asdf==5.4.0
+asdf-astropy==0.11.0
+asdf-coordinates-schemas==0.5.1
+asdf-standard==1.5.0
+asdf-transform-schemas==0.6.0
+asdf-wcs-schemas==0.5.0
+asteval==1.0.10
+astropy==8.0.1
+astropy-healpix==2.0.1
+astropy-iers-data==0.2026.9.21.0.56.25
+astroquery==0.4.11
+astroscrappy==1.3.0
+attrs==26.1.0
+beautifulsoup4==4.15.0
+cachetools==7.2.0
+cdflib==1.3.14
+certifi==2026.7.22
+cffi==2.1.1
+cftime==1.6.5
+charset-normalizer==3.5.1
+click==8.5.0
+cloudpickle==3.1.2
+cmasher==1.9.2
+colorama==0.4.6
+colorednoise==2.2.0
+colorspacious==1.1.2
+colorsynth==1.1.0
+contourpy==1.4.0
+coverage==7.16.1
+cryptography==50.0.1
+cycler==0.12.1
+dask==2026.8.0
+dask-image==2026.5.0
+dcor==0.7
+dill==0.4.1
+diskcache==5.6.3
+distlib==0.4.3
+dkist==1.18.1
+donfig==0.8.1.post1
+drms==0.9.1
+emd==0.8.1
+execnet==2.1.2
+fiasco==0.8.2
+filelock==4.0.4
+fonttools==4.66.0
+fortranformat==2.0.3
+frozenlist==1.8.0
+fsspec==2026.9.0
+globus-sdk==4.9.1
+google-crc32c==1.9.0
+gwcs==1.0.3
+h5netcdf==1.8.1
+h5py==3.16.0
+hissw==2.3
+html5lib==1.1
+humanize==4.16.0
+hypothesis==6.168.2
+idna==3.20
+imageio==2.37.4
+iniconfig==2.3.0
+irispy-lmsal==0.9.0
+isodate==0.7.2
+jaraco-classes==3.4.0
+jaraco-context==6.1.2
+jaraco-functools==4.6.0
+jeepney==0.9.0
+jinja2==3.1.6
+jmespath==1.1.0
+joblib==1.6.0
+keyring==25.7.0
+kiwisolver==1.5.1
+lazy-loader==0.6
+linkify-it-py==2.2.0
+llvmlite==0.49.0
+lmfit==1.3.4
+locket==1.0.0
+lxml==6.1.3
+markdown-it-py==4.2.0
+markupsafe==3.0.3
+matplotlib==3.11.2
+mdit-py-plugins==0.6.1
+mdurl==0.1.2
+memray==1.20.0
+more-itertools==11.1.0
+mpl-animators==1.2.4
+mpmath==1.3.0
+msgspec==0.21.1
+multidict==6.9.1
+narwhals==2.26.0
+ndcube==2.4.2
+netcdf4==1.7.4
+networkx==3.7
+numba==0.67.0
+numcodecs==0.17.0
+numexpr==2.14.2
+numpy==2.5.3
+opencv-python==5.0.0.93
+orjson==3.12.0
+packaging==26.3
+pandas==3.0.6
+parfive==2.3.1
+partd==1.4.2
+pillow==12.3.0
+pims==0.7
+plasmapy==2026.2.0
+platformdirs==4.12.0
+plotly==7.1.0
+pluggy==1.6.0
+pooch==1.9.0
+propcache==0.5.4
+py-cpuinfo2==10.1.1
+pyavm==0.9.9
+pycdfpp==0.13.1
+pycparser==3.0
+pydot==4.0.1
+pyerfa==2.0.1.5
+pyflct==0.3.1
+pygments==2.21.0
+pyistp==0.9.1
+pyjwt==2.15.0
+pyparsing==3.3.3
+pyproject-api==1.11.2
+pysciqlop-cache==0.2.2
+pysocks==1.7.1
+pytest==9.1.1
+pytest-arraydiff==0.7.0
+pytest-asdf-plugin==0.2.0
+pytest-astropy==0.12.0
+pytest-astropy-header==0.2.2
+pytest-benchmark==5.3.0
+pytest-cov==7.1.0
+pytest-doctestplus==1.7.1
+pytest-filter-subpackage==0.2.0
+pytest-httpserver==1.1.5
+pytest-lazy-fixtures==1.4.1
+pytest-memray==1.11.0
+pytest-mock==3.15.1
+pytest-mpl==0.19.0
+pytest-remotedata==0.4.2
+pytest-skip-slow==1.1.0
+pytest-timeout==2.4.0
+pytest-xdist==3.8.0
+python-dateutil==2.9.0.post0
+python-discovery==1.6.1
+pyvo==1.9.1
+pyyaml==6.0.3
+radiospectra==0.7.0
+reproject==0.21.0
+requests==2.34.2
+requests-file==3.0.1
+requests-toolbelt==1.0.0
+rich==15.0.0
+roentgen==2.4.0
+rsliding==2.0.1
+scikit-image==0.26.0
+scipy==1.18.1
+scope-emd==1.0.0
+secretstorage==3.5.0
+semantic-version==2.10.0
+six==1.17.0
+slicerator==1.1.0
+solarmach==0.5.4
+sortedcontainers==2.4.0
+soupsieve==2.10
+sparse==0.19.2
+speasy==1.8.4
+specutils==2.4.0
+streamtracer==2.6.0
+sunkit-image==0.7.0
+sunkit-instruments==0.6.2
+sunkit-magex==1.2.0
+sunpy==8.0.0
+sunpy-soar==1.12.0
+sunraster==0.7.0
+sympy==1.14.0
+tabulate==0.10.0
+textual==8.2.8
+threadpoolctl==3.7.0
+tifffile==2026.9.20
+tomli-w==1.2.0
+toolz==1.1.0
+tox==4.64.3
+tqdm==4.70.1
+typing-extensions==4.16.0
+uncertainties==3.2.3
+urllib3==2.8.0
+virtualenv==21.13.0
+watroo==0.0.4
+webencodings==0.6.1
+werkzeug==3.1.8
+wrapt==2.5.0
+xarray==2026.7.0
+xrtpy==0.5.1
+yarl==1.25.1
+zarr==3.4.0
+zeep==4.3.3
+</pre>
+</details>
+
+
+
+<details>
+  <summary>
+    <code>pre</code> / Python <code>3.12</code>
+    <small style="color:#6a737d">(203 packages)</small>
+  </summary>
+  <pre>aiapy==0.12.1
+aioftp==0.28.3
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.3
+aiosignal==1.4.0
+appdirs==1.4.4
+array-api-compat==1.15.0
+asdf==5.4.0
+asdf-astropy==0.11.0
+asdf-coordinates-schemas==0.5.1
+asdf-standard==1.5.0
+asdf-transform-schemas==0.6.0
+asdf-wcs-schemas==0.5.0
+asteval==1.0.10
+astropy==8.0.1
+astropy-healpix==2.0.1
+astropy-iers-data==0.2026.9.21.0.56.25
+astroquery==0.4.12.dev10885
+astroscrappy==1.3.0
+attrs==26.1.0
+beautifulsoup4==4.15.0
+cachetools==7.2.0
+cdflib==1.3.14
+certifi==2026.7.22
+cffi==2.1.1
+cftime==1.6.5
+charset-normalizer==3.5.1
+click==8.5.0
+cloudpickle==3.1.2
+cmasher==1.9.2
+colorama==0.4.6
+colorednoise==2.2.0
+colorspacious==1.1.2
+colorsynth==1.1.0
+contourpy==1.4.0
+coverage==7.16.1
+cryptography==50.0.1
+cycler==0.12.1
+dask==2026.8.0
+dask-image==2026.5.0
+dcor==0.7
+dill==0.4.1
+diskcache==5.6.3
+distlib==0.4.3
+dkist==1.18.1
+donfig==0.8.1.post1
+drms==0.9.1
+emd==0.8.1
+execnet==2.1.2
+fiasco==0.8.2
+filelock==4.0.4
+fonttools==4.66.0
+fortranformat==2.0.3
+frozenlist==1.8.0
+fsspec==2026.9.0
+globus-sdk==4.9.1
+google-crc32c==1.9.0
+gwcs==1.0.3
+h5netcdf==1.8.1
+h5py==3.16.0
+hissw==2.3
+html5lib==1.1
+humanize==4.16.0
+hypothesis==6.168.2
+idna==3.20
+imageio==2.37.4
+iniconfig==2.3.0
+irispy-lmsal==0.9.0
+isodate==0.7.2
+jaraco-classes==3.4.0
+jaraco-context==6.1.2
+jaraco-functools==4.6.0
+jeepney==0.9.0
+jinja2==3.1.6
+jmespath==1.1.0
+joblib==1.6.0
+keyring==25.7.0
+kiwisolver==1.5.1
+lazy-loader==0.6
+linkify-it-py==2.2.0
+llvmlite==0.50.0rc3
+lmfit==1.3.4
+locket==1.0.0
+lxml==7.0.0b1
+markdown-it-py==4.2.0
+markupsafe==3.0.3
+matplotlib==3.11.2
+mdit-py-plugins==0.6.1
+mdurl==0.1.2
+memray==1.20.0
+more-itertools==11.1.0
+mpl-animators==1.2.4
+mpmath==1.3.0
+msgspec==0.21.1
+multidict==6.9.1
+narwhals==2.26.0
+ndcube==2.4.2
+netcdf4==1.7.4
+networkx==3.7
+numba==0.68.0rc1
+numcodecs==0.17.0
+numexpr==2.14.2
+numpy==2.5.3
+opencv-python==5.0.0.93
+orjson==3.12.0
+packaging==26.3
+pandas==3.0.6
+parfive==2.3.1
+partd==1.4.2
+pillow==12.3.0
+pims==0.7
+plasmapy==2026.2.0
+platformdirs==4.12.0
+plotly==7.1.0
+pluggy==1.6.0
+pooch==1.9.0
+propcache==0.5.4
+py-cpuinfo2==10.1.1
+pyavm==0.9.9
+pycdfpp==0.13.1
+pycparser==3.0
+pydot==4.0.1
+pyerfa==2.0.1.5
+pyflct==0.3.1
+pygments==2.21.0
+pyistp==0.9.1
+pyjwt==2.15.0
+pyparsing==3.3.3
+pyproject-api==1.11.2
+pysciqlop-cache==0.2.2
+pysocks==1.7.1
+pytest==9.1.1
+pytest-arraydiff==0.7.0
+pytest-asdf-plugin==0.2.0
+pytest-astropy==0.12.0
+pytest-astropy-header==0.2.2
+pytest-benchmark==5.3.0
+pytest-cov==7.1.0
+pytest-doctestplus==1.7.1
+pytest-filter-subpackage==0.2.0
+pytest-httpserver==1.1.5
+pytest-lazy-fixtures==1.4.1
+pytest-memray==1.11.0
+pytest-mock==3.15.1
+pytest-mpl==0.19.0
+pytest-remotedata==0.4.2
+pytest-skip-slow==1.1.0
+pytest-timeout==2.4.0
+pytest-xdist==3.8.0
+python-dateutil==2.9.0.post0
+python-discovery==1.6.1
+pyvo==1.9.1
+pyyaml==6.0.3
+radiospectra==0.7.0
+reproject==0.21.0
+requests==2.34.2
+requests-file==3.0.1
+requests-toolbelt==1.0.0
+rich==15.0.0
+roentgen==2.4.0
+rsliding==2.0.1
+scikit-image==0.26.0
+scipy==1.18.1
+scope-emd==1.0.0
+secretstorage==3.5.0
+semantic-version==2.10.0
+six==1.17.0
+slicerator==1.1.0
+solarmach==0.5.4
+sortedcontainers==2.4.0
+soupsieve==2.10
+sparse==0.19.2
+speasy==1.8.4
+specutils==2.4.0
+streamtracer==2.6.0
+sunkit-image==0.7.0
+sunkit-instruments==0.6.2
+sunkit-magex==1.2.0
+sunpy==8.0.0
+sunpy-soar==1.12.0
+sunraster==0.7.0
+sympy==1.14.0
+tabulate==0.10.0
+textual==8.2.8
+threadpoolctl==3.7.0
+tifffile==2026.9.20
+tomli-w==1.2.0
+toolz==1.1.0
+tox==4.64.3
+tqdm==4.70.1
+typing-extensions==4.16.0
+uncertainties==3.2.3
+urllib3==2.8.0
+virtualenv==21.13.0
+watroo==0.0.4
+webencodings==0.6.1
+werkzeug==3.1.8
+wrapt==2.5.0
+xarray==2026.7.0
+xrtpy==0.5.2rc0
+yarl==1.25.1
+zarr==3.4.0
+zeep==4.3.3
+</pre>
+</details>
+
+
+
+<details>
+  <summary>
+    <code>dev</code> / Python <code>3.12</code>
+    <small style="color:#6a737d">(203 packages)</small>
+  </summary>
+  <pre>aioftp==0.28.3
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.3
+aiosignal==1.4.0
+appdirs==1.4.4
+array-api-compat==1.15.0
+asdf==5.4.0
+asdf-astropy==0.11.0
+asdf-coordinates-schemas==0.5.1
+asdf-standard==1.5.0
+asdf-transform-schemas==0.6.0
+asdf-wcs-schemas==0.5.0
+asteval==1.0.10
+astropy==8.0.1
+astropy-healpix==2.0.1
+astropy-iers-data==0.2026.9.21.0.56.25
+astroquery==0.4.12.dev10885
+astroscrappy==1.3.0
+attrs==26.1.0
+beautifulsoup4==4.15.0
+bokeh==4.0.0.dev5
+cachetools==7.2.0
+cdflib==1.3.14
+certifi==2026.7.22
+cffi==2.1.1
+cftime==1.6.5
+charset-normalizer==3.5.1
+click==8.5.0
+cloudpickle==3.1.2
+cmasher==1.9.2
+colorama==0.4.6
+colorednoise==2.2.0
+colorspacious==1.1.2
+colorsynth==1.1.0
+contourpy==1.4.0
+corner==2.3.0
+coverage==7.16.1
+cryptography==50.0.1
+cycler==0.12.1
+dask==2026.8.0
+dask-image==2026.5.0
+dcor==0.7
+dill==0.4.1
+diskcache==5.6.3
+distlib==0.4.3
+distributed==2026.8.0
+donfig==0.8.1.post1
+emcee==3.1.6
+emd==0.8.1
+execnet==2.1.2
+fiasco==0.8.2
+filelock==4.0.4
+fonttools==4.66.0
+fortranformat==2.0.3
+frozenlist==1.8.0
+fsspec==2026.9.0
+globus-sdk==4.9.1
+google-crc32c==1.9.0
+gwcs==1.0.3
+h5netcdf==1.8.1
+h5py==3.16.0
+hissw==2.3
+html5lib==1.1
+humanize==4.16.0
+hypothesis==6.168.2
+idna==3.20
+imageio==2.37.4
+iniconfig==2.3.0
+isodate==0.7.2
+jaraco-classes==3.4.0
+jaraco-context==6.1.2
+jaraco-functools==4.6.0
+jeepney==0.9.0
+jinja2==3.1.6
+jmespath==1.1.0
+joblib==1.6.0
+keyring==25.7.0
+kiwisolver==1.5.1
+lazy-loader==0.6
+linkify-it-py==2.2.0
+llvmlite==0.50.0rc3
+lmfit==1.3.4
+locket==1.0.0
+lxml==7.0.0b1
+lz4==4.4.5
+markdown-it-py==4.2.0
+markupsafe==3.0.3
+matplotlib==3.11.2
+mdit-py-plugins==0.6.1
+mdurl==0.1.2
+memray==1.20.0
+more-itertools==11.1.0
+mpl-animators==1.2.4
+mpmath==1.3.0
+msgpack==1.2.2
+msgspec==0.21.1
+multidict==6.9.1
+narwhals==2.26.0
+nestle==0.2.1
+netcdf4==1.7.4
+networkx==3.7
+numba==0.68.0rc1
+numcodecs==0.17.0
+numdifftools==0.11.1
+numexpr==2.14.2
+numpy==2.5.3
+opencv-python==5.0.0.93
+orjson==3.12.0
+packaging==26.3
+pandas==3.0.6
+parfive==2.3.1
+partd==1.4.2
+pillow==12.3.0
+pims==0.7
+plasmapy==2026.2.0
+platformdirs==4.12.0
+plotly==7.1.0
+pluggy==1.6.0
+pooch==1.9.0
+propcache==0.5.4
+psutil==7.2.2
+py-cpuinfo2==10.1.1
+pyarrow==25.0.1
+pyavm==0.9.9
+pycdfpp==0.13.1
+pycparser==3.0
+pydot==4.0.1
+pyerfa==2.0.1.7.dev352+ga05944233
+pygments==2.21.0
+pyistp==0.9.1
+pyjwt==2.15.0
+pyparsing==3.3.3
+pyproject-api==1.11.2
+pysciqlop-cache==0.2.2
+pysocks==1.7.1
+pytest==9.1.1
+pytest-arraydiff==0.7.0
+pytest-asdf-plugin==0.2.0
+pytest-astropy==0.12.0
+pytest-astropy-header==0.2.2
+pytest-benchmark==5.3.0
+pytest-cov==7.1.0
+pytest-doctestplus==1.7.1
+pytest-filter-subpackage==0.2.0
+pytest-httpserver==1.1.5
+pytest-lazy-fixtures==1.4.1
+pytest-memray==1.11.0
+pytest-mock==3.15.1
+pytest-mpl==0.19.0
+pytest-remotedata==0.4.2
+pytest-run-parallel==0.10.0
+pytest-skip-slow==1.1.0
+pytest-timeout==2.4.0
+pytest-xdist==3.8.0
+python-dateutil==2.9.0.post0
+python-discovery==1.6.1
+pyvo==1.9.1
+pyyaml==6.0.3
+reproject==0.21.0
+requests==2.34.2
+requests-file==3.0.1
+requests-toolbelt==1.0.0
+rich==15.0.0
+rsliding==2.0.1
+scikit-image==0.26.0
+scipy==1.18.1
+secretstorage==3.5.0
+semantic-version==2.10.0
+six==1.17.0
+slicerator==1.1.0
+sortedcontainers==2.4.0
+soupsieve==2.10
+sparse==0.19.2
+speasy==1.8.4
+specutils==2.4.0
+streamtracer==2.6.0
+sunpy==8.0.0
+sunpy-soar==1.12.0
+sympy==1.14.0
+tabulate==0.10.0
+tblib==3.2.2
+textual==8.2.8
+threadpoolctl==3.7.0
+tifffile==2026.9.20
+tomli-w==1.2.0
+toolz==1.1.0
+tornado==6.6a1
+tox==4.64.3
+tqdm==4.70.1
+typing-extensions==4.16.0
+uncertainties==3.2.3
+urllib3==2.8.0
+virtualenv==21.13.0
+watroo==0.0.4
+webencodings==0.6.1
+werkzeug==3.1.8
+wrapt==2.5.0
+xarray==2026.7.0
+xyzservices==2026.9.1
+yarl==1.25.1
+zarr==3.4.0
+zeep==4.3.3
+zict==3.0.0
+</pre>
+</details>
+
+
+
+<details>
+  <summary>
+    <code>stable</code> / Python <code>3.14</code>
+    <small style="color:#6a737d">(203 packages)</small>
+  </summary>
+  <pre>aiapy==0.12.1
+aioftp==0.28.3
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.3
+aiosignal==1.4.0
+appdirs==1.4.4
+array-api-compat==1.15.0
+asdf==5.4.0
+asdf-astropy==0.11.0
+asdf-coordinates-schemas==0.5.1
+asdf-standard==1.5.0
+asdf-transform-schemas==0.6.0
+asdf-wcs-schemas==0.5.0
+asteval==1.0.10
+astropy==8.0.1
+astropy-healpix==2.0.1
+astropy-iers-data==0.2026.9.21.0.56.25
+astroquery==0.4.11
+astroscrappy==1.3.0
+attrs==26.1.0
+beautifulsoup4==4.15.0
+cachetools==7.2.0
+cdflib==1.3.14
+certifi==2026.7.22
+cffi==2.1.1
+cftime==1.6.5
+charset-normalizer==3.5.1
+click==8.5.0
+cloudpickle==3.1.2
+cmasher==1.9.2
+colorama==0.4.6
+colorednoise==2.2.0
+colorspacious==1.1.2
+colorsynth==1.1.0
+contourpy==1.4.0
+coverage==7.16.1
+cryptography==50.0.1
+cycler==0.12.1
+dask==2026.8.0
+dask-image==2026.5.0
+dcor==0.7
+dill==0.4.1
+diskcache==5.6.3
+distlib==0.4.3
+dkist==1.18.1
+donfig==0.8.1.post1
+drms==0.9.1
+emd==0.8.1
+execnet==2.1.2
+fiasco==0.8.2
+filelock==4.0.4
+fonttools==4.66.0
+fortranformat==2.0.3
+frozenlist==1.8.0
+fsspec==2026.9.0
+globus-sdk==4.9.1
+google-crc32c==1.9.0
+gwcs==1.0.3
+h5netcdf==1.8.1
+h5py==3.16.0
+hissw==2.3
+html5lib==1.1
+humanize==4.16.0
+hypothesis==6.168.2
+idna==3.20
+imageio==2.37.4
+iniconfig==2.3.0
+irispy-lmsal==0.9.0
+isodate==0.7.2
+jaraco-classes==3.4.0
+jaraco-context==6.1.2
+jaraco-functools==4.6.0
+jeepney==0.9.0
+jinja2==3.1.6
+jmespath==1.1.0
+joblib==1.6.0
+keyring==25.7.0
+kiwisolver==1.5.1
+lazy-loader==0.6
+linkify-it-py==2.2.0
+llvmlite==0.49.0
+lmfit==1.3.4
+locket==1.0.0
+lxml==6.1.3
+markdown-it-py==4.2.0
+markupsafe==3.0.3
+matplotlib==3.11.2
+mdit-py-plugins==0.6.1
+mdurl==0.1.2
+memray==1.20.0
+more-itertools==11.1.0
+mpl-animators==1.2.4
+mpmath==1.3.0
+msgspec==0.21.1
+multidict==6.9.1
+narwhals==2.26.0
+ndcube==2.4.2
+netcdf4==1.7.4
+networkx==3.7
+numba==0.67.0
+numcodecs==0.17.0
+numexpr==2.14.2
+numpy==2.5.3
+opencv-python==5.0.0.93
+orjson==3.12.0
+packaging==26.3
+pandas==3.0.6
+parfive==2.3.1
+partd==1.4.2
+pillow==12.3.0
+pims==0.7
+plasmapy==2026.2.0
+platformdirs==4.12.0
+plotly==7.1.0
+pluggy==1.6.0
+pooch==1.9.0
+propcache==0.5.4
+py-cpuinfo2==10.1.1
+pyavm==0.9.9
+pycdfpp==0.13.1
+pycparser==3.0
+pydot==4.0.1
+pyerfa==2.0.1.5
+pyflct==0.3.1
+pygments==2.21.0
+pyistp==0.9.1
+pyjwt==2.15.0
+pyparsing==3.3.3
+pyproject-api==1.11.2
+pysciqlop-cache==0.2.2
+pysocks==1.7.1
+pytest==9.1.1
+pytest-arraydiff==0.7.0
+pytest-asdf-plugin==0.2.0
+pytest-astropy==0.12.0
+pytest-astropy-header==0.2.2
+pytest-benchmark==5.3.0
+pytest-cov==7.1.0
+pytest-doctestplus==1.7.1
+pytest-filter-subpackage==0.2.0
+pytest-httpserver==1.1.5
+pytest-lazy-fixtures==1.4.1
+pytest-memray==1.11.0
+pytest-mock==3.15.1
+pytest-mpl==0.19.0
+pytest-remotedata==0.4.2
+pytest-skip-slow==1.1.0
+pytest-timeout==2.4.0
+pytest-xdist==3.8.0
+python-dateutil==2.9.0.post0
+python-discovery==1.6.1
+pyvo==1.9.1
+pyyaml==6.0.3
+radiospectra==0.7.0
+reproject==0.21.0
+requests==2.34.2
+requests-file==3.0.1
+requests-toolbelt==1.0.0
+rich==15.0.0
+roentgen==2.4.0
+rsliding==2.0.1
+scikit-image==0.26.0
+scipy==1.18.1
+scope-emd==1.0.0
+secretstorage==3.5.0
+semantic-version==2.10.0
+six==1.17.0
+slicerator==1.1.0
+solarmach==0.5.4
+sortedcontainers==2.4.0
+soupsieve==2.10
+sparse==0.19.2
+speasy==1.8.4
+specutils==2.4.0
+streamtracer==2.6.0
+sunkit-image==0.7.0
+sunkit-instruments==0.6.2
+sunkit-magex==1.2.0
+sunpy==8.0.0
+sunpy-soar==1.12.0
+sunraster==0.7.0
+sympy==1.14.0
+tabulate==0.10.0
+textual==8.2.8
+threadpoolctl==3.7.0
+tifffile==2026.9.20
+tomli-w==1.2.0
+toolz==1.1.0
+tox==4.64.3
+tqdm==4.70.1
+typing-extensions==4.16.0
+uncertainties==3.2.3
+urllib3==2.8.0
+virtualenv==21.13.0
+watroo==0.0.4
+webencodings==0.6.1
+werkzeug==3.1.8
+wrapt==2.5.0
+xarray==2026.7.0
+xrtpy==0.5.1
+yarl==1.25.1
+zarr==3.4.0
+zeep==4.3.3
+</pre>
+</details>
+
+
+
+<details>
+  <summary>
+    <code>pre</code> / Python <code>3.14</code>
+    <small style="color:#6a737d">(203 packages)</small>
+  </summary>
+  <pre>aiapy==0.12.1
+aioftp==0.28.3
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.3
+aiosignal==1.4.0
+appdirs==1.4.4
+array-api-compat==1.15.0
+asdf==5.4.0
+asdf-astropy==0.11.0
+asdf-coordinates-schemas==0.5.1
+asdf-standard==1.5.0
+asdf-transform-schemas==0.6.0
+asdf-wcs-schemas==0.5.0
+asteval==1.0.10
+astropy==8.0.1
+astropy-healpix==2.0.1
+astropy-iers-data==0.2026.9.21.0.56.25
+astroquery==0.4.12.dev10885
+astroscrappy==1.3.0
+attrs==26.1.0
+beautifulsoup4==4.15.0
+cachetools==7.2.0
+cdflib==1.3.14
+certifi==2026.7.22
+cffi==2.1.1
+cftime==1.6.5
+charset-normalizer==3.5.1
+click==8.5.0
+cloudpickle==3.1.2
+cmasher==1.9.2
+colorama==0.4.6
+colorednoise==2.2.0
+colorspacious==1.1.2
+colorsynth==1.1.0
+contourpy==1.4.0
+coverage==7.16.1
+cryptography==50.0.1
+cycler==0.12.1
+dask==2026.8.0
+dask-image==2026.5.0
+dcor==0.7
+dill==0.4.1
+diskcache==5.6.3
+distlib==0.4.3
+dkist==1.18.1
+donfig==0.8.1.post1
+drms==0.9.1
+emd==0.8.1
+execnet==2.1.2
+fiasco==0.8.2
+filelock==4.0.4
+fonttools==4.66.0
+fortranformat==2.0.3
+frozenlist==1.8.0
+fsspec==2026.9.0
+globus-sdk==4.9.1
+google-crc32c==1.9.0
+gwcs==1.0.3
+h5netcdf==1.8.1
+h5py==3.16.0
+hissw==2.3
+html5lib==1.1
+humanize==4.16.0
+hypothesis==6.168.2
+idna==3.20
+imageio==2.37.4
+iniconfig==2.3.0
+irispy-lmsal==0.9.0
+isodate==0.7.2
+jaraco-classes==3.4.0
+jaraco-context==6.1.2
+jaraco-functools==4.6.0
+jeepney==0.9.0
+jinja2==3.1.6
+jmespath==1.1.0
+joblib==1.6.0
+keyring==25.7.0
+kiwisolver==1.5.1
+lazy-loader==0.6
+linkify-it-py==2.2.0
+llvmlite==0.50.0rc3
+lmfit==1.3.4
+locket==1.0.0
+lxml==7.0.0b1
+markdown-it-py==4.2.0
+markupsafe==3.0.3
+matplotlib==3.11.2
+mdit-py-plugins==0.6.1
+mdurl==0.1.2
+memray==1.20.0
+more-itertools==11.1.0
+mpl-animators==1.2.4
+mpmath==1.3.0
+msgspec==0.21.1
+multidict==6.9.1
+narwhals==2.26.0
+ndcube==2.4.2
+netcdf4==1.7.4
+networkx==3.7
+numba==0.68.0rc1
+numcodecs==0.17.0
+numexpr==2.14.2
+numpy==2.5.3
+opencv-python==5.0.0.93
+orjson==3.12.0
+packaging==26.3
+pandas==3.0.6
+parfive==2.3.1
+partd==1.4.2
+pillow==12.3.0
+pims==0.7
+plasmapy==2026.2.0
+platformdirs==4.12.0
+plotly==7.1.0
+pluggy==1.6.0
+pooch==1.9.0
+propcache==0.5.4
+py-cpuinfo2==10.1.1
+pyavm==0.9.9
+pycdfpp==0.13.1
+pycparser==3.0
+pydot==4.0.1
+pyerfa==2.0.1.5
+pyflct==0.3.1
+pygments==2.21.0
+pyistp==0.9.1
+pyjwt==2.15.0
+pyparsing==3.3.3
+pyproject-api==1.11.2
+pysciqlop-cache==0.2.2
+pysocks==1.7.1
+pytest==9.1.1
+pytest-arraydiff==0.7.0
+pytest-asdf-plugin==0.2.0
+pytest-astropy==0.12.0
+pytest-astropy-header==0.2.2
+pytest-benchmark==5.3.0
+pytest-cov==7.1.0
+pytest-doctestplus==1.7.1
+pytest-filter-subpackage==0.2.0
+pytest-httpserver==1.1.5
+pytest-lazy-fixtures==1.4.1
+pytest-memray==1.11.0
+pytest-mock==3.15.1
+pytest-mpl==0.19.0
+pytest-remotedata==0.4.2
+pytest-skip-slow==1.1.0
+pytest-timeout==2.4.0
+pytest-xdist==3.8.0
+python-dateutil==2.9.0.post0
+python-discovery==1.6.1
+pyvo==1.9.1
+pyyaml==6.0.3
+radiospectra==0.7.0
+reproject==0.21.0
+requests==2.34.2
+requests-file==3.0.1
+requests-toolbelt==1.0.0
+rich==15.0.0
+roentgen==2.4.0
+rsliding==2.0.1
+scikit-image==0.26.0
+scipy==1.18.1
+scope-emd==1.0.0
+secretstorage==3.5.0
+semantic-version==2.10.0
+six==1.17.0
+slicerator==1.1.0
+solarmach==0.5.4
+sortedcontainers==2.4.0
+soupsieve==2.10
+sparse==0.19.2
+speasy==1.8.4
+specutils==2.4.0
+streamtracer==2.6.0
+sunkit-image==0.7.0
+sunkit-instruments==0.6.2
+sunkit-magex==1.2.0
+sunpy==8.0.0
+sunpy-soar==1.12.0
+sunraster==0.7.0
+sympy==1.14.0
+tabulate==0.10.0
+textual==8.2.8
+threadpoolctl==3.7.0
+tifffile==2026.9.20
+tomli-w==1.2.0
+toolz==1.1.0
+tox==4.64.3
+tqdm==4.70.1
+typing-extensions==4.16.0
+uncertainties==3.2.3
+urllib3==2.8.0
+virtualenv==21.13.0
+watroo==0.0.4
+webencodings==0.6.1
+werkzeug==3.1.8
+wrapt==2.5.0
+xarray==2026.7.0
+xrtpy==0.5.2rc0
+yarl==1.25.1
+zarr==3.4.0
+zeep==4.3.3
+</pre>
+</details>
+
+
+
+<details>
+  <summary>
+    <code>dev</code> / Python <code>3.14</code>
+    <small style="color:#6a737d">(203 packages)</small>
+  </summary>
+  <pre>aioftp==0.28.3
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.3
+aiosignal==1.4.0
+appdirs==1.4.4
+array-api-compat==1.15.0
+asdf==5.4.0
+asdf-astropy==0.11.0
+asdf-coordinates-schemas==0.5.1
+asdf-standard==1.5.0
+asdf-transform-schemas==0.6.0
+asdf-wcs-schemas==0.5.0
+asteval==1.0.10
+astropy==8.0.1
+astropy-healpix==2.0.1
+astropy-iers-data==0.2026.9.21.0.56.25
+astroquery==0.4.12.dev10885
+astroscrappy==1.3.0
+attrs==26.1.0
+beautifulsoup4==4.15.0
+bokeh==4.0.0.dev5
+cachetools==7.2.0
+cdflib==1.3.14
+certifi==2026.7.22
+cffi==2.1.1
+cftime==1.6.5
+charset-normalizer==3.5.1
+click==8.5.0
+cloudpickle==3.1.2
+cmasher==1.9.2
+colorama==0.4.6
+colorednoise==2.2.0
+colorspacious==1.1.2
+colorsynth==1.1.0
+contourpy==1.4.0
+corner==2.3.0
+coverage==7.16.1
+cryptography==50.0.1
+cycler==0.12.1
+dask==2026.8.0
+dask-image==2026.5.0
+dcor==0.7
+dill==0.4.1
+diskcache==5.6.3
+distlib==0.4.3
+distributed==2026.8.0
+donfig==0.8.1.post1
+emcee==3.1.6
+emd==0.8.1
+execnet==2.1.2
+fiasco==0.8.2
+filelock==4.0.4
+fonttools==4.66.0
+fortranformat==2.0.3
+frozenlist==1.8.0
+fsspec==2026.9.0
+globus-sdk==4.9.1
+google-crc32c==1.9.0
+gwcs==1.0.3
+h5netcdf==1.8.1
+h5py==3.16.0
+hissw==2.3
+html5lib==1.1
+humanize==4.16.0
+hypothesis==6.168.2
+idna==3.20
+imageio==2.37.4
+iniconfig==2.3.0
+isodate==0.7.2
+jaraco-classes==3.4.0
+jaraco-context==6.1.2
+jaraco-functools==4.6.0
+jeepney==0.9.0
+jinja2==3.1.6
+jmespath==1.1.0
+joblib==1.6.0
+keyring==25.7.0
+kiwisolver==1.5.1
+lazy-loader==0.6
+linkify-it-py==2.2.0
+llvmlite==0.50.0rc3
+lmfit==1.3.4
+locket==1.0.0
+lxml==7.0.0b1
+lz4==4.4.5
+markdown-it-py==4.2.0
+markupsafe==3.0.3
+matplotlib==3.11.2
+mdit-py-plugins==0.6.1
+mdurl==0.1.2
+memray==1.20.0
+more-itertools==11.1.0
+mpl-animators==1.2.4
+mpmath==1.3.0
+msgpack==1.2.2
+msgspec==0.21.1
+multidict==6.9.1
+narwhals==2.26.0
+nestle==0.2.1
+netcdf4==1.7.4
+networkx==3.7
+numba==0.68.0rc1
+numcodecs==0.17.0
+numdifftools==0.11.1
+numexpr==2.14.2
+numpy==2.5.3
+opencv-python==5.0.0.93
+orjson==3.12.0
+packaging==26.3
+pandas==3.0.6
+parfive==2.3.1
+partd==1.4.2
+pillow==12.3.0
+pims==0.7
+plasmapy==2026.2.0
+platformdirs==4.12.0
+plotly==7.1.0
+pluggy==1.6.0
+pooch==1.9.0
+propcache==0.5.4
+psutil==7.2.2
+py-cpuinfo2==10.1.1
+pyarrow==25.0.1
+pyavm==0.9.9
+pycdfpp==0.13.1
+pycparser==3.0
+pydot==4.0.1
+pyerfa==2.0.1.7.dev352+ga05944233
+pygments==2.21.0
+pyistp==0.9.1
+pyjwt==2.15.0
+pyparsing==3.3.3
+pyproject-api==1.11.2
+pysciqlop-cache==0.2.2
+pysocks==1.7.1
+pytest==9.1.1
+pytest-arraydiff==0.7.0
+pytest-asdf-plugin==0.2.0
+pytest-astropy==0.12.0
+pytest-astropy-header==0.2.2
+pytest-benchmark==5.3.0
+pytest-cov==7.1.0
+pytest-doctestplus==1.7.1
+pytest-filter-subpackage==0.2.0
+pytest-httpserver==1.1.5
+pytest-lazy-fixtures==1.4.1
+pytest-memray==1.11.0
+pytest-mock==3.15.1
+pytest-mpl==0.19.0
+pytest-remotedata==0.4.2
+pytest-run-parallel==0.10.0
+pytest-skip-slow==1.1.0
+pytest-timeout==2.4.0
+pytest-xdist==3.8.0
+python-dateutil==2.9.0.post0
+python-discovery==1.6.1
+pyvo==1.9.1
+pyyaml==6.0.3
+reproject==0.21.0
+requests==2.34.2
+requests-file==3.0.1
+requests-toolbelt==1.0.0
+rich==15.0.0
+rsliding==2.0.1
+scikit-image==0.26.0
+scipy==1.18.1
+secretstorage==3.5.0
+semantic-version==2.10.0
+six==1.17.0
+slicerator==1.1.0
+sortedcontainers==2.4.0
+soupsieve==2.10
+sparse==0.19.2
+speasy==1.8.4
+specutils==2.4.0
+streamtracer==2.6.0
+sunpy==8.0.0
+sunpy-soar==1.12.0
+sympy==1.14.0
+tabulate==0.10.0
+tblib==3.2.2
+textual==8.2.8
+threadpoolctl==3.7.0
+tifffile==2026.9.20
+tomli-w==1.2.0
+toolz==1.1.0
+tornado==6.6a1
+tox==4.64.3
+tqdm==4.70.1
+typing-extensions==4.16.0
+uncertainties==3.2.3
+urllib3==2.8.0
+virtualenv==21.13.0
+watroo==0.0.4
+webencodings==0.6.1
+werkzeug==3.1.8
+wrapt==2.5.0
+xarray==2026.7.0
+xyzservices==2026.9.1
+yarl==1.25.1
+zarr==3.4.0
+zeep==4.3.3
+zict==3.0.0
+</pre>
+</details>
+
+
+
+
+<script>
+function openTarget() {
+  const id = location.hash.slice(1);
+  if (!id) return;
+  const el = document.getElementById(id);
+  if (el && el.tagName === "DETAILS") {
+    el.open = true;
+    el.scrollIntoView({behavior: "instant", block: "start"});
+  }
+}
+openTarget();
+addEventListener("hashchange", openTarget);
+</script>
+
+</body>
+</html>
