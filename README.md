@@ -29,9 +29,10 @@ integration-dashboard reusable workflow at `@main`, which:
 1. reads `columns:` from `packages.yaml` and expands it into a job
    matrix, one job per (Python version, variant) column;
 2. in each job, installs the system packages listed in the workflow's
-   `libraries` input, builds a shared venv with sunpy plus every
-   package that can be installed alongside it, and runs `pytest --pyargs
-   <module>` for each one;
+   `libraries` input, builds a shared venv with every listed package
+   that can be installed without dragging a shared dependency down for
+   the others (the rest are reported as held back), and runs `pytest
+   --pyargs <module>` for each one;
 3. collects the results and publishes the dashboard to `gh-pages`.
 
 Running locally
@@ -43,7 +44,8 @@ pip install git+https://github.com/OpenAstronomy/integration-dashboard
 # Some packages also need FFTW and ffmpeg, e.g. on Debian/Ubuntu:
 #   sudo apt-get install libfftw3-dev ffmpeg
 
-# Run from the root of this repo so conftest.py is picked up.
+# Run from the root of this repo so conftest.py and sunpy_pytest.ini
+# are picked up.
 integration-dashboard run --variant stable --python 3.12
 
 # Or a single package, to iterate faster:
@@ -67,14 +69,13 @@ Configuration
 
 Everything is configured in `packages.yaml`:
 
-- `core_package` is sunpy, installed into every venv first, together
-  with the pytest plugins listed in its `test_deps` (pytest-remotedata,
-  so `remote_data` tests are skipped). For the `dev` variant it comes
-  from the nightly wheel indexes in `dev_index_urls`.
+- `test_deps` lists pytest plugins installed in every venv alongside
+  pytest (pytest-remotedata, so `remote_data` tests are skipped).
+- `dev_index_urls` lists the nightly wheel indexes used by `dev` columns.
 - `columns` lists the (Python version, variant) pairs to test, each one
   a dashboard column. Use uv notation for Python, so `"3.14t"` is the
   free-threaded 3.14 build. The CI matrix is generated from this list.
-- `packages` lists the packages to test.
+- `packages` lists the packages to install and test, sunpy included.
 
 To add or disable a package, edit its entry in `packages.yaml`. Each
 entry takes:
@@ -110,7 +111,9 @@ check to the commit that opens the rendered page directly.
 
 To keep PR feedback fast, each package is capped at the first 10
 collected tests by the repo-root `conftest.py` (which has to live here
-because `pytest --pyargs` collects from site-packages). The preview is a
+because `pytest --pyargs` collects from site-packages). For the same
+reason sunpy's own tests are run with `sunpy_pytest.ini`, since sunpy's
+pytest config requires plugins that are not installed here. The preview is a
 smoke check of layout, install resolution and the workflow itself, not a
 full regression signal. A new push to a PR cancels its in-progress run.
 
